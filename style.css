@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
 /*--------root variables---------*/
 :root{
 --color-primary:#7380ec;
@@ -51,7 +51,7 @@ font-size:14px;
 body{
 width:100vw;
 height:100vh;
-font-family:poppins, sans-serif;
+font-family:'Yekan';
 font-size:0.88rem;
 background:var(--color-background);
 user-select:none;
