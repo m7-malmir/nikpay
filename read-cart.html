@@ -1,3 +1,28 @@
+
+<?php 
+include_once 'dbConfig.php';
+
+if(!empty($_GET['status'])){
+    switch($_GET['status']){
+      case 'succ':
+        $statusType='alert-success';
+        $statusMsg='Members data has been imported';
+        break;
+      case 'err':
+        $statusType='alert-danger';
+        $statusMsg='some problem occured, please wait';
+        break;
+    case 'invalid_file':
+            $statusType='alert-danger';
+            $statusMsg='please upload correct file';
+            break;  
+     default:
+     $statusType='';
+     $statusMsg='';  
+    }
+
+}
+?>
 <!DOCTYPE html>
 <html dir="rtl">
 <head>
