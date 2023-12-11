@@ -1,14 +1,14 @@
 <?php 
-// Database configuration 
-$dbHost     = "localhost"; 
-$dbUsername = "root"; 
-$dbPassword = "root"; 
-$dbName     = "codexworld"; 
- 
-// Create database connection 
-$db = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName); 
- 
-// Check connection 
-if ($db->connect_error) { 
-    die("Connection failed: " . $db->connect_error); 
-}
+ define("DB_HOST", "localhost");
+ define("DB_USER", "root");
+ define("DB_PASSWORD", "");
+ define("DB_DATABASE", "codexworld");
+
+ $db = new mysqli('DB_HOST', 'DB_USER', 'DB_PASSWORD', 'DB_DATABASE');
+ // you could test connection eventually using a if and else conditional statement, 
+ // feel free to take out the code below once you see Connected!
+ if ($db) {
+   echo "Connected!";
+ } else {
+   echo "Connection Failed";
+ }
