@@ -47,23 +47,23 @@ if(!empty($_GET['status'])){
 <div class="row">
 <div class="col-md-12 head">
     <div class="float-right">
-        <a href="javascript:void(0);" class="btn btn-success" onclick="formToggle('importFrm');">import</a>
-        <a href="exportData.php" class="btn btn-primary">export</a>
+        <a href="javascript:void(0);" class="btn btn-success" onClick="formToggle('importFrm');">import11</a>
+        
     </div>
 </div>
 <div class="col-md-12" id="importFrm" style="display:none;">
 <form action="importData.php" method="post" enctype="multipart/form-data">
 <input type="file" name="file" id="">
-<input type="submit" class="btn btn-primary" value="IMPORT">
+<input type="submit" class="btn btn-primary" value="IMPORT11" name="importSubmit">
 </form>
 </div>
 
 <!-- Export link -->
-<div class="col-md-12 head">
+<!-- <div class="col-md-12 head">
     <div class="float-right">
         <a href="exportData.php" class="btn btn-success"><i class="dwn"></i> Export</a>
     </div>
-</div>
+</div> -->
 
 <!-- Data list table --> 
 <table class="table table-striped table-bordered">
@@ -81,7 +81,7 @@ if(!empty($_GET['status'])){
     <tbody>
    <?php 
     // Fetch records from database 
-    $result = $db->query("SELECT * FROM members ORDER BY id ASC"); 
+    $result = $db->query("SELECT * FROM `members` ORDER BY `id` ASC"); 
     if($result->num_rows > 0){ 
         while($row = $result->fetch_assoc()){ 
     ?>
@@ -107,12 +107,13 @@ if(!empty($_GET['status'])){
 
 
 <script>
+   // alert();
     function formToggle(ID){
         var element=document.getElementById(ID);
         if(element.style.display==="none"){
-            element.style.display==="block"
+            element.style.display="block"
         }else{
-            element.style.display==="none"
+            element.style.display="none"
         }
     }
 </script>
