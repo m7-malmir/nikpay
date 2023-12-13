@@ -32,6 +32,16 @@ if(!empty($_GET['status'])){
 </head>
 <body>
 
+
+<?php if(!empty($statusMsg)){
+ ?>
+<div class="col-xs-12">
+    <div class="alert <?php echo $statusType; ?>">
+    <?php echo $statusMsg; ?>
+</div>
+</div>
+
+<?php } ?>
 <div class="container"> 
     <aside>
         <div class="top">
