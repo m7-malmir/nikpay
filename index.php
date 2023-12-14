@@ -106,7 +106,7 @@ if(!empty($_GET['status'])){
 
 
 
-<script>
+<script src="jquery-3.7.1.min.js"><script>
    // alert();
     function formToggle(ID){
         var element=document.getElementById(ID);
