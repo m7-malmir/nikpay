@@ -14,13 +14,13 @@ if($query->num_rows > 0){
     $f = fopen('php://memory', 'w'); 
      
     // Set column headers 
-    $fields = array('ID', 'FIRST NAME', 'LAST NAME', 'EMAIL', 'GENDER', 'COUNTRY', 'CREATED', 'STATUS'); 
+    $fields = array('Name', 'email', 'phone','status'); 
     fputcsv($f, $fields, $delimiter); 
      
     // Output each row of the data, format line as csv and write to file pointer 
     while($row = $query->fetch_assoc()){ 
-        $status = ($row['status'] == 1)?'Active':'Inactive'; 
-        $lineData = array($row['id'], $row['first_name'], $row['last_name'], $row['email'], $row['gender'], $row['country'], $row['created'], $status); 
+       // $status = ($row['status'] == 1)?'Active':'Inactive'; 
+        $lineData = array($row['title'], $row['email'], $row['phone'], $row['status']); 
         fputcsv($f, $lineData, $delimiter); 
     } 
      

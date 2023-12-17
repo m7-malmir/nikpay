@@ -39,7 +39,7 @@ include_once 'dbConfig.php';
         </div><!--top-->
         <div class="sidebar">
             <a href="#"><span class="material-icons-sharp">grid_view</span>
-             <h3>Dashboord</h3>
+             <h3>داشبورد</h3>
             </a>
             <a href="index.html" ><span class="material-icons-sharp">person</span>
              <h3>پروفایل</h3>
