@@ -1,7 +1,10 @@
+<?php
+include_once 'dbConfig.php';
+?>
 <!DOCTYPE html>
-<html dir="rtl">
+<html lang="ar" dir="rtl">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" charset="utf-8" content="width=device-width, initial-scale=1.0">
 <titleREsponsiv dashboord</title>
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
 <link rel="stylesheet" href="./style.css">
@@ -11,10 +14,11 @@
       font-family: arial, sans-serif;
       border-collapse: collapse;
       width: 100%;
+      
     }
     td, th {
       border: 1px solid #dddddd;
-      text-align: left;
+      text-align: center;
       padding: 5px;
     }
     
@@ -68,54 +72,37 @@
         </div><!--sidebar-->
     </aside>
     <!--------------------end of aside-------------------------->
+<!-- Data list table --> 
+<table class="table table-striped table-bordered">
+  <thead class="thead-dark">
+      <tr>
+          <th>شماره</th>
+          <th>اسم</th>
+          <th>ایمیل</th>
+          <th>تلفن</th>
+          <th>وضعیت</th>
+      </tr>
+  </thead>
+  <tbody>
+ <?php 
+  // Fetch records from database 
+  $result = $db->query("SELECT * FROM `members` ORDER BY `id` ASC"); 
+  if($result->num_rows > 0){ 
+      while($row = $result->fetch_assoc()){ 
+  ?>
+      <tr>
+          <td><?php echo $row['id']; ?></td>
+          <td><?php echo $row['title']; ?></td>
+          <td><?php echo $row['email']; ?></td>
+          <td><?php echo $row['phone']; ?></td>
+          <td><?php echo ($row['status'] == 'active')?'Active':'Inactive'; ?></td>
+      </tr>
+  <?php } }else{ ?>
+      <tr><td colspan="7">No member(s) found...</td></tr>
+  <?php } ?>
+  </tbody>
+</table>
 
-
-    <table>
-        <tr>
-          <th>Company</th>
-          <th>Contact</th>
-          <th>Country</th>
-          <th>Company</th>
-          <th>Contact</th>
-          <th>Country</th>
-          <th>Company</th>
-          <th>Contact</th>
-          <th>Country</th>
-          <th>Company</th>
-          <th>Contact</th>
-          <th>Country</th>
-        </tr>
-        <tr>
-          <td>65464</td>
-          <td>8888</td>
-          <td>9898</td>
-          <td>65464</td>
-          <td>8888</td>
-          <td>9898</td>
-          <td>65464</td>
-          <td>8888</td>
-          <td>9898</td>
-          <td>65464</td>
-          <td>8888</td>
-          <td>9898</td>
-        </tr>
-        <tr>
-            <td>65464</td>
-            <td>8888</td>
-            <td>9898</td>
-            <td>65464</td>
-            <td>8888</td>
-            <td>9898</td>
-            <td>65464</td>
-            <td>8888</td>
-            <td>9898</td>
-            <td>65464</td>
-            <td>8888</td>
-            <td>9898</td>
-          </tr>
-    
-     
-      </table>
       
 </div><!--container-->
 

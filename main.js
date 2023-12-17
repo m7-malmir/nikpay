@@ -5,13 +5,13 @@ const themeToggler = document.querySelector(".theme-toggler");
 //show sidebar
 menuBtn.addEventListener('click',()=>{
     sideMenu.style.display='block';
-})
+});
 //close sidebar
 closeBtn.addEventListener('click',()=>{
     sideMenu.style.display='none';
-})
+});
 
-//chacge theme
+//change theme
 
 themeToggler.addEventListener('click',()=>{
     document.body.classList.toggle('dark-theme-variables');
@@ -19,25 +19,3 @@ themeToggler.addEventListener('click',()=>{
     themeToggler.querySelector('span:nth-child(1)').classList.toggle('active');
     themeToggler.querySelector('span:nth-child(2)').classList.toggle('active');
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
