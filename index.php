@@ -32,7 +32,7 @@ if(!empty($_GET['status'])){
 </head>
 <body>
     
-<div class="comtainer">
+<div class="container">
 <h2>member list</h2>
 
 <?php if(!empty($statusMsg)){
@@ -45,13 +45,12 @@ if(!empty($_GET['status'])){
 
 <?php } ?>
 <div class="row">
-<div class="col-md-12 head">
+<div class="col-md-12 head d-flex">
     <div class="float-right">
         <a href="javascript:void(0);" class="btn btn-success" onClick="formToggle('importFrm');">import11</a>
         
     </div>
-</div>
-<div class="col-md-12" id="importFrm" style="display:none;">
+    <div class="col-md-12" id="importFrm" style="display:none;">
 <form action="importData.php" method="post" enctype="multipart/form-data">
 <input type="file" name="file" id="">
 <input type="submit" class="btn btn-primary" value="IMPORT11" name="importSubmit">
@@ -59,11 +58,13 @@ if(!empty($_GET['status'])){
 </div>
 
 <!-- Export link -->
-<!-- <div class="col-md-12 head">
+<div class="col-md-12 head">
     <div class="float-right">
-        <a href="exportData.php" class="btn btn-success"><i class="dwn"></i> Export</a>
+        <a href="exportData.php" class="btn btn-info"><i class="dwn"></i> Export</a>
     </div>
-</div> -->
+</div>
+</div>
+
 
 <!-- Data list table --> 
 <table class="table table-striped table-bordered">
@@ -72,9 +73,7 @@ if(!empty($_GET['status'])){
             <th>#ID</th>
             <th>Name</th>
             <th>Email</th>
-            <th>Gender</th>
-            <th>Country</th>
-            <th>Created</th>
+            <th>Phone</th>
             <th>Status</th>
         </tr>
     </thead>
@@ -87,12 +86,10 @@ if(!empty($_GET['status'])){
     ?>
         <tr>
             <td><?php echo $row['id']; ?></td>
-            <td><?php echo $row['first_name'].' '.$row['last_name']; ?></td>
+            <td><?php echo $row['title']; ?></td>
             <td><?php echo $row['email']; ?></td>
-            <td><?php echo $row['gender']; ?></td>
-            <td><?php echo $row['country']; ?></td>
-            <td><?php echo $row['created']; ?></td>
-            <td><?php echo ($row['status'] == 1)?'Active':'Inactive'; ?></td>
+            <td><?php echo $row['phone']; ?></td>
+            <td><?php echo ($row['status'] == 'active')?'Active':'Inactive'; ?></td>
         </tr>
     <?php } }else{ ?>
         <tr><td colspan="7">No member(s) found...</td></tr>
@@ -106,7 +103,7 @@ if(!empty($_GET['status'])){
 
 
 
-<script src="jquery-3.7.1.min.js"><script>
+<script>
    // alert();
     function formToggle(ID){
         var element=document.getElementById(ID);
