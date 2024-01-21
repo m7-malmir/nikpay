@@ -1,0 +1,2680 @@
+<html lang="fa-IR">
+ <head>
+  <style>
+@> 
+  <meta charset="utf-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <link rel="icon" href="/files/logo.webp" alt="لوگو نیک پی" size="16x16"> 
+
+  <title>اعلانات</title> 
+  <style>
+		body{
+		background-color: #f4f4f4;
+	}
+
+	::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+	  color: #000;
+	  opacity: 1; /* Firefox */
+	}
+	
+	/*  ثبت نام پذیرنده جدید */
+	.TableRow2{
+		display:flex;
+		margin: 5px 0;
+	}
+
+	.TableRow2 input,
+	.TableRow2 select{
+		width:48%;
+	}
+	
+	.table_row_2_partition input,
+	.table_row_2_partition select{
+		width:100%;
+	}
+	
+	#InscriptionSection{
+		width: 100%;
+		margin:20px auto;
+	}
+
+
+	.label{
+		display:flex;
+		flex-direction:column;
+		width:100%;
+		text-align:right;
+		background-color:rgb(255, 255, 255);
+		box-shadow: 5px 5px 5px #dcdcdc70;
+		border-radius: 10px;
+		margin-bottom:30px;
+		padding: 20px 0;
+		transition: 0.3s;
+	}
+	.LabelTitle{
+		font-weight:900;
+		margin:10px;
+		font-size: 16px;
+	}
+	.label:hover{
+		box-shadow: 10px 10px 20px gray;
+	}
+	
+	.customselect{
+		height: 97%;
+		margin: 0 auto;
+		display:flex;
+		flex-direction:column;
+	}
+	.customselectsearch{
+		display:flex;
+		border: 1px solid #dee2e6;
+		height: inherit;
+		border-radius: 0.25rem;
+	}
+	.customselectsearch input{
+		border:none;
+		width: calc(100% - 24px);
+		height: inherit;
+		background-color:inherit;
+		color:inherit;
+	}
+	.customselectsearch img{
+		margin:auto 6px;
+		width:8px;
+		height:8px;
+	}
+	.customselectsearchlist{
+		display:none;
+		flex-direction:column;
+		border: 1px solid #dee2e6;
+		width: inherit;
+		position: absolute;
+		z-index: 2;
+		color: black;
+		background-color: white;
+		top: 100%;
+	}
+
+	.customselectsearchlist span{
+		display:flex;
+	}
+	.customselectsearchlist span p{
+		font-size:16px;
+		width: calc(100% - 32px);
+		margin:2px auto;
+	}
+	.customselectsearchlist span input{
+		width:14px;
+		height:14px;
+		margin: auto;
+	}
+	
+	.VerifyButton{
+		box-shadow: 0 4px 7px -1px rgb(0 0 0 / 11%), 0 2px 4px -1px rgb(0 0 0 / 7%);
+		background-size: 150%;
+		background-position-x: 25%;
+		padding: 0;
+		font-size: 14px;
+		border-radius: 0.5rem;
+		transition: all .15s ease-in;
+		background-image: linear-gradient(310deg,#141727,#3a416f);
+		border: 0;
+		color: #fff;
+		background-color: transparent;
+	}
+	.SubmitBtn{
+		letter-spacing: -.025rem;
+		box-shadow: 0 4px 7px -1px rgb(0 0 0 / 11%), 0 2px 4px -1px rgb(0 0 0 / 7%);
+		background-size: 150%;
+		background-position-x: 25%;
+		width: 46%;
+		padding: 0.75rem 1.5rem;
+		font-size: 16px;
+		border-radius: 0.5rem;
+		transition: all .15s ease-in;
+		background-image: linear-gradient(310deg,#141727,#3a416f);
+		text-align: center;
+		vertical-align: middle;
+		display: inline-block;
+		font-weight: 700;
+		line-height: 1.4;
+		cursor: pointer;
+		border: 0;
+		color: #fff;
+		background-color: transparent;
+		margin: 10px auto;
+	}
+	.SubmitBtn:active,
+	.VerifyButton:active{
+		background-color: #344767;
+	}
+	.SubmitBtn:hover,
+	.VerifyButton:hover{
+		background-color: #344767;
+		border-color: #344767;
+		box-shadow: 0 3px 5px -1px rgb(0 0 0 / 9%), 0 2px 3px -1px rgb(0 0 0 / 7%);
+		transform: scale(1.02);
+	}
+
+	/* دیگر فرایند ها */ 
+	.label input,
+	.label select{
+		font-size: .875rem;
+		transition: all .15s ease-in-out;
+		display: block;
+		height: calc(2.75rem + 2px);
+		padding: 0.625rem 0.75rem;
+		font-size: 1rem;
+		line-height: 1.5;
+		color: #8898aa;
+		background-color: #fff;
+		background-clip: padding-box;
+		border: 1px solid #dee2e6;
+		border-radius: 0.25rem;
+		box-shadow: 0 3px 2px rgb(233 236 239 / 5%);
+		margin:0 auto;
+	}
+
+	/* راهنما */
+	#HelpMenu{
+		display:none;
+	}
+	
+	/*دکمه بازگشت بالای صفحه*/
+	#ReturnFormButton{
+		border:none;
+		background-color: transparent;
+		width:36px;
+		float: left;
+		margin: 10px 5px;
+		align-self: end;
+	}
+	
+	/* بخش جدول ها */
+
+	.search_div {
+		width: inherit;
+	}
+	.table_row_2_partition{
+		position: relative;
+		width: 48%;
+	}
+	.table_row_2_partition label{
+		color: #6200ee;
+		right: 10px;
+		top: -12px;
+		background-color: #ffffff;
+		position: absolute;
+		padding: 0 5px;
+	}
+
+	
+	.TableSection {
+		box-shadow: 0 20px 27px 0 rgb(0 0 0 / 5%);
+		display: flex;
+		flex-direction: column;
+		word-wrap: break-word;
+		background-color: #fff;
+		background-clip: border-box;
+		border: 0 solid rgba(0,0,0,.125);
+		border-radius: 1rem;
+		text-decoration: none;
+		margin: 10px auto;
+		color: #344767;
+		min-height: 110px;
+	}
+	.TableSection p{
+		font-weight:900;
+		margin:10px;
+		font-size: 16px;
+	}
+	.TableSection table {
+		text-align:center;
+		width:100%;
+		border-collapse: collapse;
+	}
+
+	.TableSection table td{
+		border-top:1px solid #d3d3d3;
+		height: 100%;
+	}
+	.TableSection table th{
+		color: #a9a9a9;
+		height: 45px;
+	}
+	.FunctionTh{
+		min-width:40px;
+	}
+
+	.TableSection table input{
+		font-size: 14px;
+		background-color: transparent;
+		border:none;
+		text-align:inherit;
+		width:100%;
+		color:inherit;
+		text-align:center;
+	}
+
+
+	.TableSection table tr:hover,
+	#SearchList tr:hover{
+		background-color: #ddd;
+	}
+		
+	.InfomrationTable{
+		box-shadow: 0 20px 27px 0 rgb(0 0 0 / 5%);
+		display: flex;
+		flex-direction: column;
+		min-width: 0;
+		word-wrap: break-word;
+		background-color: #fff;
+		background-clip: border-box;
+		border: 0 solid rgba(0,0,0,.125);
+		border-radius: 1rem;
+		color: #344767;
+		border-collapse: collapse;
+		width: 90%;
+		margin:25px auto;
+		padding: 25px 0;
+	}
+	
+	.TablingInfo{
+		display:flex;
+		width: calc(100% - 60px);
+		margin: 0 auto;
+	}
+	
+	.TablingInfo table{
+		border-collapse: collapse;
+		width: 100%;
+	}
+	
+	.InfomrationTable article{
+		height: 60px;
+		margin: 10 auto;
+		width:100%;
+		display:flex;
+	}
+	
+	.InfomrationTable input,
+	.InfomrationTable select{
+		width:100%;
+		background-color:transparent;
+		border:none;
+	}
+	.InfomrationTable td,
+	.InfomrationTable th{
+		border-bottom: 1px solid #a7a7a7;
+		width:25%;
+		height: 40px;
+	}
+	.InfomrationTable th{
+		color: #a7a7a7;
+	}
+	/* دکمه های عملیات در جداول */
+	#functional_th_td{
+		position:sticky;
+		left:0;
+		background-color: #fff;
+	}
+	#functional_th_td div{
+		display:none;
+		flex-direction: row-reverse;
+		left: 100%;
+		position: absolute;
+		background-color: transparent;
+		top: 0;
+	}
+	#functional_th_td form{
+		display:flex;
+		margin-block-end: 0;
+	}
+	#functional_th_td div p{
+		text-align:center;
+		margin:0 auto;
+	}
+
+	.more_button{
+		border-radius: 6px;
+		border: none;
+		background-color: #333333;
+		color: #ffffff;
+		width: 100%;
+	}
+	.slidemenu_table{
+	}
+	.slidemenu_table a{
+		border-radius: 6px;
+		margin:1px 1px;
+		width:100%;
+		height: 100%;
+		background-color: #333333;
+		color: #ffffff;
+	}
+		
+	.TitleInfo{
+		width:calc(100% - 130px);
+		margin-right:20px;
+		font-size:16px;
+		font-weight:900;
+		
+	}
+	
+	.ImageField{
+		width: 28px;
+		height: 28px;
+		border-radius: 6px;
+		margin: auto;
+		display:flex;
+	}
+
+	.ImageField img{
+		width:80%;
+		margin: auto;
+	}
+	.Counter{
+		border-radius:6px;
+		margin: auto;
+		font-size:16px;
+		font-weight:900;
+	}
+	
+	/* منو جستجو و فیلتر کردن */
+	#SearchForm{
+		display:flex;
+		margin:0px auto;
+	}
+	#SearchForm article{
+		width: 100%;
+		display:flex;
+		margin: 3px auto;
+	}
+	
+	.search_div{
+		display:flex;
+		border-radius: 6px;
+		background-color: white;
+		position: relative;
+		margin: 5px auto;
+		padding: 10px 5px;
+		box-shadow: 0 .25rem .375rem -.0625rem hsla(0,0%,8%,.12),0 .125rem .25rem -.0625rem hsla(0,0%,8%,.07)!important;
+	}
+	
+	.search_div input,
+	.search_div select,
+	.search_div option{
+		border:none;
+		background-color:inherit;
+		width: 100%;
+		height: 32px;
+		border-radius: 6px;
+		box-shadow: 0 0 3px 1px #333333;
+		outline-color: #333333;
+	}
+	.search_div select:focus,
+	.search_div input:focus{
+		box-shadow: 0 0 3px 1px purple;
+		outline-color: purple;
+	}
+	
+	.search_div label{
+		font-size:12px;
+		color: #333333;
+		right: 10px;
+		bottom: 33px;
+		background-color: #ffffff;
+		position: absolute;
+		padding: 0 5px;
+	}
+	
+	.search_div button{
+		border:none;
+		border-radius:8px;
+		width:32px;
+		height:32px;
+		background-image:linear-gradient(310deg,#7928ca,#ff0080);
+		box-shadow: 0 .25rem .375rem -.0625rem hsla(0,0%,8%,.12),0 .125rem .25rem -.0625rem hsla(0,0%,8%,.07)!important;
+	}
+
+	.search_div button img{
+		width:90%;
+	}
+
+	/*دکه پیش فرض Icon */
+	.IconButton{
+		font-size:1rem;
+		background-color:#ff9d17;
+		border:none;
+		width:30px;
+		height:30px;
+		padding: 1px;
+		margin:0 auto;
+		border-radius: 8px;
+		box-shadow: 1px 1px 2px 1px gray;
+		background-size: cover;
+	}
+	.IconButton img{
+		width: 80%;
+		height:80%;
+		margin: auto;
+	}
+	
+	/* منو های کلی*/
+	#FunctionalMenu{
+		display:flex;
+		flex-direction:column;
+		width: 90%;
+		margin:50px auto;
+	}
+	#FunctionalMenu div{
+		display:flex;
+	}
+	.classification{
+		box-shadow: 0 20px 27px 0 rgb(0 0 0 / 5%);
+		display: flex;
+		min-width: 0;
+		word-wrap: break-word;
+		background-color: #fff;
+		background-clip: border-box;
+		border: 0 solid rgba(0,0,0,.125);
+		border-radius: 1rem;
+		width: 280px;
+		height: 80px;
+		text-decoration: none;
+		margin: 25px auto;
+		color: #344767;
+	}
+	.classification button{
+		border:none;
+		border-radius:8px;
+		width:48px;
+		height:48px;
+		background-image:linear-gradient(310deg,#7928ca,#ff0080);
+		box-shadow: 0 .25rem .375rem -.0625rem hsla(0,0%,8%,.12),0 .125rem .25rem -.0625rem hsla(0,0%,8%,.07)!important;
+		margin: auto 10px;
+	}
+	.classification img{
+		width: 90%;
+		margin: auto;
+	}
+	.classification p{
+		margin: auto;
+		width: calc(100% - 100px);
+		font-size: 14px;
+		font-weight: 900;
+		text-align: center;
+	}
+	
+	/*دکه پیش فرض ارسال */
+	.SendButton{
+		background-color:transparent;
+		font-size:1rem;
+		background-color:inherit;
+		border:none;
+		background-size: cover;
+		width:30px;
+		height:30px;
+		padding: 1px;
+		margin:0 auto;
+	}
+
+	/* جستجو گر پیشرفته */
+	#TheUserSearcher {
+		display:flex;
+		flex-direction:column;
+		width:100%;
+	}
+	#SpecialSearcher {
+		transition: all .15s ease-in-out;
+		display: block;
+		height: calc(2.75rem + 2px);
+		padding: 0.625rem 0.75rem;
+		font-size: 1rem;
+		line-height: 1.5;
+		height: 100%;
+		color: #344767;
+		background-color: inherit;
+		background-clip: padding-box;
+		border: 1px solid #dee2e6;
+		border-radius: 0.25rem;
+		box-shadow: 0 3px 2px rgb(233 236 239 / 5%);
+		margin: 0 auto;
+	}
+	#SearchList {
+		list-style-type: none;
+		padding: 0;
+		margin: 0;
+		height:100px;
+		overflow-y: scroll;
+		display:none;
+		z-index: 10;
+		position:relative;
+		flex-direction:column;
+		background-color: white;
+		width: inherit;
+	}
+	
+	#SearchList input{
+		width:20px;
+	}
+	#SearchList td{
+		font-size:16px;
+		width:100%;
+	}
+
+	#SearchList tr {
+		width: 100%;
+	}
+
+	.AcceptButton{
+		background-image: linear-gradient(310deg,#17ad37,#98ec2d);
+		color: white;
+		padding: 0.55em 0.9em;
+		font-size: 12px;
+		font-weight: 900;
+		line-height: 1;
+		color: #fff;
+		text-align: center;
+		white-space: nowrap;
+		vertical-align: baseline;
+		border-radius: 0.45rem;
+		border:none;
+	}
+	
+
+	#MainSection{
+		margin:0 auto;
+		display: flex;
+		flex-direction:column;
+		background-color:inherit;
+		width: 100%;
+		height: calc(100vh - 64px);
+		overflow-y: scroll;
+	}
+	
+	
+	
+	#SpecialSearcher, #SpecialSearcher14{
+		width:100%;
+	}
+	#SearchList, #SearchList14 {
+		list-style-type: none;
+		padding: 0;
+		margin: 0;
+		height:100px;
+		overflow-y: scroll;
+		display:none;
+		z-index: 10;
+		position:absolute;
+		margin-top: 30px;
+		background-color: white;
+	}
+
+	#SearchList tr, #SearchList tr14 :hover:not(.header) {
+		background-color: #eee;
+	}
+
+	.search_partition{
+		width:100%;
+		display:flex;
+		background-color: transparent;
+	}
+	.search_field{
+		display:flex;
+		width: 100%;
+	}
+	.search_field select{
+		display:flex;
+		width: 100%;
+		background-color:white;
+	}
+	
+	/* نمایان شدن فیلد ها */
+	input:focus,
+	select:focus{
+		color: #8898aa;
+		background-color: #fff;
+		border-color: #5e72e4;
+		outline: 0;
+		box-shadow: 0 3px 9px rgb(50 50 9 / 0%), 3px 4px 8px rgb(94 114 228 / 10%);
+	}
+
+	/* جدول خود ساخته */
+	.TableRow2,
+	.TableRow4{
+		display:flex;
+		margin: 5px 0;
+	}
+
+	.Cadre{
+		display:flex;
+		flex-direction:column;
+		width:95%;
+		text-align:right;
+		background-color:rgb(255, 255, 255);
+		box-shadow: 5px 5px 5px #dcdcdc70;
+		border-radius: 10px;
+		margin:15px auto;
+		padding: 20px 0;
+		transition: 0.3s;
+	}
+	.CadreTitle{
+		font-weight:900;
+		margin:10px;
+		font-size: 16px;
+	}
+	.Cadre:hover{
+		box-shadow: 10px 10px 20px gray;
+	}
+	.Cadre input,
+	.Cadre select{
+		font-size: .875rem;
+		transition: all .15s ease-in-out;
+		height: calc(2.75rem + 2px);
+		font-size: 1rem;
+		line-height: 1.5;
+		color: #8898aa;
+		background-color: #fff;
+		background-clip: padding-box;
+		border: 1px solid #dee2e6;
+		border-radius: 0.25rem;
+		box-shadow: 0 3px 2px rgb(233 236 239 / 5%);
+		margin:0 auto;
+	}
+	
+	/* منو آبشاری در بخش ترمینال کارتخوان  */
+	.drop_down_functional_menu{
+		width:48px;
+		top:5px;
+		background-color: inherit;
+		border: none;
+		z-index:3;
+		position: relative;
+		color: #5a738e;
+	}
+	
+	/* دکمه های جدول خود ساخته */
+	.PagingButton{
+		font-size: .875rem;
+		transition: all .15s ease-in-out;
+		height: calc(2.75rem + 2px);
+		font-size: 1rem;
+		line-height: 1.5;
+		color: #F3F3F3;
+		background-color: #333;
+		background-clip: padding-box;
+		border: none;
+		border-radius: 0.25rem;
+		box-shadow: 0 3px 2px rgb(233 236 239 / 5%);
+		margin: 0 auto;
+		width: 24%;
+		font-weight:900;
+	}
+	/* دکمه های جدول خود ساخته 2*/
+	#pagination{
+		display:flex;
+		margin: 5px auto;
+	}
+	#pagination button{
+		border-radius: 6px;
+		background-color: inherit;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 18px;
+		font-size:16px;
+		color: #333;
+		margin: 0 2px;
+		border:none;
+		font-weight:900;
+	}
+	#pagination button:hover{
+		text-decoration: underline;
+		color: #444;
+	}
+	@media screen and (min-width:768px){
+		/* بخش جدول ها */
+		th{
+			min-width: 130px;
+		}
+		.TableSection {
+			width: 100%;
+		}
+		#SearchForm{
+			flex-direction:row;
+		}
+		.LittleScreen{
+			display:table-cell;
+		}
+		.MiddleScreen{
+			display:table-cell;
+		}
+		#SearchForm article{
+			flex-direction:row;
+		}
+
+		.TablingInfo{
+			flex-direction: row;
+		}
+		/* منو های کلی */
+		#FunctionalMenu div{
+			flex-direction: row;
+		}
+		
+		/* جدول خود ساخته*/
+		.TableRow2 input,
+		.TableRow2 select,
+		.search_field,
+		.VerifyButton{
+			width:48%;
+		}
+		
+		.table_row_2_partition .customselect,
+		.table_row_2_partition input,
+		.table_row_2_partition select{
+			width:100%;
+		}
+		
+		.TableRow2,
+		.TableRow4{
+			flex-direction: row;
+		}
+		
+		.TableRow4 input,
+		.TableRow4 select{
+			width:24%;
+		}
+
+		.table_row_2_partition{
+			width: 48%;
+			margin: 4px auto;
+		}
+		.table_row_2_partition label{
+			font-size: inherit;
+		}
+		
+		.bigger_field_TableRow2{
+			width:74% !important;
+		}
+		.VerifyButton{
+			margin: 0 auto;
+			padding: 0;
+		}
+		#UserSearcher {
+			height: calc(2.75rem + 2px);
+			width: 48%;
+			margin: 0 auto;
+		}
+	}
+	@media screen and (max-width:768px){
+		/* بخش جدول ها */
+		th{
+			min-width: 90px;
+		}
+		.TableSection {
+			width: 100%;
+		}
+		#SearchForm{
+			flex-direction:column;
+		}
+		.LittleScreen{
+			display:none;
+		}
+		.MiddleScreen{
+			display:table-cell;
+		}
+		#SearchForm article{
+			flex-direction:column;
+		}
+
+		.TablingInfo{
+			flex-direction: column;
+		}
+		
+		/* منو های کلی */
+		#FunctionalMenu div{
+			flex-direction: column;
+		}
+		
+		/* جدول خود ساخته*/
+		.TableRow2 input,
+		.TableRow2 select,
+		.search_field,
+		.VerifyButton,
+		.TableRow4 input,
+		.bigger_field_TableRow2,
+		.TableRow4 select{
+			width:98%;
+		}
+		.TableRow2,
+		.TableRow4{
+			flex-direction: column;
+		}
+		
+		.table_row_2_partition{
+			width: 98%;
+			margin: 4px auto;
+		}
+
+		.table_row_2_partition label{
+			font-size: inherit;
+		}
+		
+		.VerifyButton{
+			margin: 0 auto;
+			padding: 0;
+		}
+		#UserSearcher {
+			height: calc(2.75rem + 2px);
+			width: 48%;
+			margin: 0 auto;
+		}
+	}
+	@media screen and (max-width:440px){
+		/* بخش جدول ها */
+		th{
+			min-width: 50px;
+		}
+		.TableSection {
+			width: calc(100% - 10px);
+		}
+		#SearchForm{
+			flex-direction:column;
+		}
+		.LittleScreen{
+			display:none;
+		}
+		.MiddleScreen{
+			display:none;
+		}
+		#SearchForm article{
+			flex-direction:column;
+		}
+
+		.TablingInfo{
+			flex-direction: column;
+		}
+		
+		/* منو های کلی */
+		#FunctionalMenu div{
+			flex-direction: column;
+		}
+		
+		/* جدول خود ساخته*/
+		.TableRow2 .customselect,
+		.TableRow2 input,
+		.TableRow2 select,
+		.search_field,
+		.VerifyButton,
+		.TableRow4 input,
+		.bigger_field_TableRow2,
+		.TableRow4 select{
+			width:98%;
+		}
+		.TableRow2,
+		.TableRow4{
+			flex-direction: column;
+		}
+
+		.table_row_2_partition{
+			width: 98%;
+			margin: 12px auto;
+		}
+
+		.table_row_2_partition label{
+			font-size: 12px;
+		}
+	
+		.VerifyButton{
+			margin: 10px auto 0 auto;
+			padding: 5px 0px;
+		}
+		#UserSearcher {
+			height: calc(2.75rem + 2px);
+			width: 98%;
+			margin: 0 auto;
+		}
+	}</style>
+ </head> 
+ <body> 
+  <style>
+
+main{
+	display:block;
+	margin: 0 auto;
+}
+.navbar {
+	overflow: hidden;
+	background-color: #333333;
+	color: #ffffff;
+}
+.light-mode .navbar{
+	background-color: #333333;
+	color: #ffffff;
+}
+.dark-mode .navbar{
+	background-color: #fff;
+	color: #333;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: right;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown1:hover .dropbtn {
+  background-color: red;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+	float: none;
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+	text-align: left;
+}
+
+.dropdown-content a:hover,
+#navbar2_content div:hover
+{
+	background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+
+
+aside{
+	background-image: linear-gradient(#161920, #617eaa);
+	color:white;
+	margin-left:5px;
+}
+
+
+.menuimg{
+	border-radius: 10px;
+	margin:5px auto;
+	color: #1f1f1f;
+	background-color: #fff;
+	border:none;
+	width:48px;
+	height:48px;
+	margin:10px auto;
+	box-shadow: 0 0 10px 5px white;
+	transition: 0.3s;
+}
+.menuimg:hover{
+	color: #fff;
+	background-color:white;
+	width:72px;
+	height:72px;
+	box-shadow: 0 0 10px 5px white;
+}
+
+#NotificationCounter{
+	top:2px;
+	position:absolute;
+	width:20px;
+	height:20px;
+	background-color:red;
+	color:white;
+	border-radius:20px;
+	font-size:14px;
+	text-align:center;
+}
+
+#navbar2{
+	display:none;
+	background-color: #f9f9f9;
+	color: #000;
+	position: absolute;
+	width: 100%;
+	z-index:9999;
+	width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    left: 0;
+}
+
+#navbar2_content{
+	float:left;
+	flex-direction:column;
+	width:160px;
+	margin-right: auto;
+	background-color: inherit;
+	color:inherit;
+	text-align:center;
+}
+
+#navbar2_content div{
+	padding:8px 0;
+	color:inherit;
+}
+
+#navbar2_content a{
+	text-decoration:none;
+	color:inherit;
+}
+#HeaderImage a img{
+	display:flex;
+	width:32px;
+	height:32px;
+}
+
+#header_smallsize{
+	flex-direction:column;
+	width:100%;
+	background-color: #333333;
+	color: #ffffff;
+}
+
+.header_smallsize_topic{
+	text-align: center;
+	margin-top: 15px;
+}
+
+.header_smallsize_menu{
+	text-align: center;
+}
+
+.header_smallsize_menu a{
+	color: #ffffff;
+	text-decoration: none;
+}
+
+#header_hamburger_button{
+	flex-direction:column;
+	width:32px;
+	height:32px;
+	margin:auto;
+	float:right;
+	padding: 12px 8px;
+}
+#header_hamburger_button div{
+	width:30px;
+	height:3px;
+	margin-top:5px;
+	background-color: #ffffff;
+}
+
+@media screen and (min-width:768px){
+	#header_bigsize{
+		display:block;
+	}
+	#header_smallsize{
+		display:none;
+	}
+	#header_hamburger_button{
+		display:none;
+	}
+}
+@media screen and (max-width:768px){
+	#header_bigsize{
+		display:none;
+	}
+	#header_smallsize{
+		display:none;
+	}
+	#header_hamburger_button{
+		display:flex;
+	}
+}
+@media screen and (max-width:440px){
+	#header_bigsize{
+		display:none;
+	}
+	#header_smallsize{
+		display:none;
+	}
+	#header_hamburger_button{
+		display:flex;
+	}
+}
+</style> 
+  <script>
+/*
+document.documentElement.classList.add("light-mode");
+function ToggleTheme(){
+	document.documentElement.classList.add("dark-mode");
+}
+*/
+//console.log(localStorage.getItem("color-scheme"));
+//console.log(window.matchMedia("(prefers-color-scheme:light)").matches);
+//console.log(window.matchMedia("(prefers-color-scheme:dark)").matches);
+
+function ToggleNavBarMenu(){
+	var navbar2 = document.getElementById("navbar2");
+	if(navbar2.style.display == 'flex'){
+		navbar2.style.display = 'none';
+	}else{
+		navbar2.style.display = 'flex';
+	}
+}
+function ToggleHeaderSideMenu(){
+	var navbar2 = document.getElementById("header_smallsize");
+	if(navbar2.style.display == 'flex'){
+		navbar2.style.display = 'none';
+	}else{
+		navbar2.style.display = 'flex';
+	}
+}
+</script> 
+  <div class="navbar"> 
+   <div style="width:160px;display:flex;float:left;color: white;position:relative;height:55px;" onclick="ToggleNavBarMenu();"> 
+    <a style="display:none;width:32px;height:32px;margin:auto;" href="/membership/notification/"> <img style="width: 100%;margin-top: 5px;" src="/library/images/notification.webp"> 
+     <div id="NotificationCounter"> 
+     </div> </a> 
+    <div style="width:calc(100% - 32px);height:32px;display:flex;margin:auto;text-overflow: ellipsis;white-space: nowrap;overflow: hidden;"> 
+     <div style="margin: auto;">
+      admin admin
+     </div> 
+    </div> 
+    <div style="width:32px;height:32px;margin:auto 5px;"> 
+     <img src="/library/images/user_logo_white.webp" style="width:30px;height:30px;"> 
+    </div> 
+   </div> 
+   <div id="HeaderImage" style="display:none;"> 
+    <a href="./?logout=on"> <img src="/library/images/logout_white.webp"> </a> 
+    <a href="/membership/notification/"> <img src="/library/images/notification.webp"> 
+     <div id="NotificationCounter">
+       اعلانات ( 100+ ) 
+     </div> </a> 
+   </div> 
+   <div id="header_hamburger_button" style="" onclick="ToggleHeaderSideMenu();"> 
+    <div style=""></div> 
+    <div style=""></div> 
+    <div style=""></div> 
+   </div> 
+   <div id="header_bigsize"> 
+    <div class="dropdown"> 
+     <button class="dropbtn"> <a>منو عمومی</a> <i class="fa fa-caret-down"></i> </button> 
+     <div class="dropdown-content"> 
+      <div class="" id=""> 
+       <a href="/maintenance/external/paymentservice/">تعمیرگاه سانیار سرویس</a> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="dropdown"> 
+     <button class="dropbtn"> <a>منو</a> <i class="fa fa-caret-down"></i> </button>
+     <div class="dropdown-content">
+      <div class="" id="">
+       <a href="../../">منو</a>
+      </div>
+     </div>
+     <div class="dropdown-content">
+      <div class="" id="">
+       <a href="../../membership/">خانه</a>
+       <a href="../../membership/profile/">پروفایل</a>
+       <a href="../../library/logout.php">خروج</a>
+       <a href="../../membership/bank/PaymentTerminal/V1/">کارتخوان</a>
+       <a href="../../membership/tool/sidebyside/">چسباندن عکس کنار هم</a>
+       <a href="../../membership/bank/PaymentTerminal/WebServices/Passargad/Query/">استعلام سریال </a>
+       <a href="../../membership/bank/AutomaticTellerMachine/V1/">خودپرداز</a>
+       <a href="../../Bank/Registry/">رجیستر پذیرنده</a>
+       <a href="../../membership/bank/PaymentTerminal/Export/Terminal/Export/index.php?Acceptor=off">خروجی ترمینال</a>
+       <a href="../../membership/maintenance/">تعمیرات کارتخوان</a>
+      </div>
+     </div>
+    </div> 
+   </div> 
+  </div> 
+  <section id="navbar2" style=""> 
+   <div id="navbar2_content" style=""> 
+    <div> 
+     <a href="/membership/">داشبورد</a> 
+    </div> 
+    <div> 
+     <a href="/membership/profile/">پروفایل</a> 
+    </div> 
+    <div> 
+     <a style="" href="/membership/message/messenger/"> پیام ها ( 0 ) </a> 
+    </div> 
+    <div> 
+     <a style="" href="/membership/notification/"> اعلانات ( 100+ ) </a> 
+    </div> 
+    <div>
+     <a href="/membership/admin/">ادمین</a>
+    </div> 
+    <div>
+     <a href="./?logout=on">خروج</a>
+    </div> 
+   </div> 
+  </section> 
+  <section id="header_smallsize"> 
+   <div class="header_smallsize_topic"> 
+    <a>منو</a> 
+   </div> 
+   <div style="width:80%;height:1px;margin: 3px auto;background-color:#333333;"></div> 
+   <div class="header_smallsize_menu"> 
+    <a href="../../">منو</a> 
+   </div> 
+   <div class="header_smallsize_menu"> 
+    <a href="../../membership/">خانه</a> 
+   </div> 
+   <div class="header_smallsize_menu"> 
+    <a href="../../membership/profile/">پروفایل</a> 
+   </div> 
+   <div class="header_smallsize_menu"> 
+    <a href="../../library/logout.php">خروج</a> 
+   </div> 
+   <div class="header_smallsize_menu"> 
+    <a href="../../membership/bank/PaymentTerminal/V1/">کارتخوان</a> 
+   </div> 
+   <div class="header_smallsize_menu"> 
+    <a href="../../membership/tool/sidebyside/">چسباندن عکس کنار هم</a> 
+   </div> 
+   <div class="header_smallsize_menu"> 
+    <a href="../../membership/bank/PaymentTerminal/WebServices/Passargad/Query/">استعلام سریال </a> 
+   </div> 
+   <div class="header_smallsize_menu"> 
+    <a href="../../membership/bank/AutomaticTellerMachine/V1/">خودپرداز</a> 
+   </div> 
+   <div class="header_smallsize_menu"> 
+    <a href="../../Bank/Registry/">رجیستر پذیرنده</a> 
+   </div> 
+   <div class="header_smallsize_menu"> 
+    <a href="../../membership/bank/PaymentTerminal/Export/Terminal/Export/index.php?Acceptor=off">خروجی ترمینال</a> 
+   </div> 
+   <div class="header_smallsize_menu"> 
+    <a href="../../membership/maintenance/">تعمیرات کارتخوان</a> 
+   </div> 
+  </section> 
+  <main> 
+   <style>
+
+	main{
+		display: flex;
+	}
+
+	.side_menu{
+		overflow-y: auto;
+		height:calc(100vh - 60px);
+		display:flex;
+		flex-direction:column;
+		background-color: #333333;
+		color: #ffffff;
+		position: fixed;
+		font-size: 14px;
+	}
+	.side_menu_topic{
+		padding:2px 0;
+		display:flex;
+		width:90%;
+		color:white;
+		margin:4px auto;
+		border-radius: 3px;
+		text-decoration:none;
+	}
+	.side_menu_topic img{
+		margin: auto 8px;
+		width:26px;
+		height:26px;
+	}
+	.side_menu_topic:hover{
+		background-color:#484848;
+	}
+	
+	@media screen and (min-width:768px){
+		#MainSection{
+			width: calc(100% - 240px);
+			margin-right: 250px;
+		}
+		.side_menu{
+			width:240px;
+		}
+		.side_menu_topic p{
+			display:block;
+		}
+	}
+	@media screen and (max-width:768px){
+		#MainSection{
+			width: calc(100% - 240px);
+			margin-right: 250px;
+		}
+		.side_menu{
+			width:240px;
+		}
+		.side_menu_topic p{
+			display:block;
+		}
+	}
+	@media screen and (max-width:440px){
+		#MainSection{
+			width: calc(100% - 50px);
+			margin-right: 50px;
+		}
+		.side_menu{
+			width:50px;
+		}
+		.side_menu_topic p{
+			display:none;
+		}
+	}
+</style> 
+   <section class="side_menu"> 
+    <div style=""></div> 
+    <a class="side_menu_topic" style="background-color:inherit;"> <img src="/membership/bank/PaymentTerminal/V1/images/menu/paqi_logo.png"> <p>منو اعلانات</p> </a> 
+    <a style="width:90%;margin:20px auto;font-size:16px;text-decoration:none;color: white;text-align:center;border-bottom: 1px solid white;" href="#"></a> 
+    <a href="/membership/notification/" class="side_menu_topic"> <img src="/membership/bank/PaymentTerminal/V1/images/menu/home.png"> <p>میزکار</p> </a> 
+    <a href="../../membership/notification/Inscription/Acceptor/" class="side_menu_topic"> <img src="../../membership/bank/PaymentTerminal/V1/images/menu/new_acceptor.png"> <p>پذیرنده جدید()</p> </a> 
+    <a href="../../membership/notification/Resume/" class="side_menu_topic"> <img src="../../membership/bank/PaymentTerminal/V1/images/menu/pos.png"> <p>رزومه کاری()</p> </a> 
+    <a href="../../membership/notification/Activation/" class="side_menu_topic"> <img src="../../membership/bank/PaymentTerminal/V1/images/menu/request.png"> <p>فعال سازی()</p> </a> 
+    <a href="../../membership/notification/Registry/" class="side_menu_topic"> <img src="../../membership/bank/PaymentTerminal/V1/images/menu/document.png"> <p>طرح رجیستری()</p> </a> 
+    <a href="../../membership/notification/RepositoryEntry/" class="side_menu_topic"> <img src="../../membership/bank/PaymentTerminal/V1/images/menu/document.png"> <p>ورود به انبار ()</p> </a> 
+   </section>
+   <section id="MainSection"> 
+    <section> 
+     <a style="display:none;" href="../admin/"> <button id="ReturnFormButton"> <img src="/membership/navigation/images/return.webp" style="width:100%;"> </button> </a> 
+     <a style="display:none;" href="Export/"> <button id="ReturnFormButton"> <img src="/library/images/Excel.webp" style="width:100%;"> </button> </a> 
+     <a style="display:none;" href="/membership/accounting/invoice/Sell/import/"> <button id="ReturnFormButton"> <img src="/library/images/import11.webp" style="width:100%;"> </button> </a> 
+     <a> <button id="ReturnFormButton" form="CancelForm"> <img src="/library/images/NoFilter.webp" style="width:100%;"> </button> </a> 
+     <a> <button id="ReturnFormButton" form="SearchForm"> <img src="/library/images/magnifier11.webp" style="width:100%;"> </button> </a> 
+     <a href="../Search/"> <button id="ReturnFormButton"> <img src="/library/images/option11.webp" style="width:100%;"> </button> </a> 
+     <a> <button onclick="ToggleSideToolbar('SideToolbar');" id="ReturnFormButton" style="float: right;"> <img src="/library/images/more.webp" style="width:100%;"> </button> </a> 
+    </section> 
+    <form id="ExpertSerachForm" action="../Search/#terminal" style="display: none;" method="GET"></form> 
+    <form id="CancelForm" action="./." method="GET" style="display: none;"></form> 
+    <div id="scounter2" style="display:none;"> 
+    </div> 
+    <section class="TableSection"> 
+     <div style="overflow: auto;width: 100%;position: relative;"> 
+      <table style="width: 100%;max-width: 100%;background-color: inherit;"> 
+       <form action="" method="GET" id="SearchForm"></form> 
+       <tbody>
+        <tr> 
+         <th class="" style="min-width: 50px;border-top-right-radius: 1rem;"> 
+          <div class="search_div" id="limit" style="width:50px;"> 
+           <label>تعداد</label> 
+           <input name="bGltaXQ=" value="50" style=""> 
+          </div> </th> 
+         <th class="" style=""> 
+          <div class="search_div" id="" style=""> 
+           <label>کد یکتا</label> 
+           <input name="c2lk" value="" style=""> 
+          </div> </th> 
+         <th class=""> 
+          <div class="search_div" id="idcode"> 
+           <label>کاربر</label> 
+           <input name="" value=""> 
+          </div> </th> 
+         <th class=""> 
+          <div class="search_div" id="serial"> 
+           <label>کد پیگیری</label> 
+           <input name="" value=""> 
+          </div> </th> 
+         <th class=""> 
+          <div class="search_div" id="serial"> 
+           <label>نوع</label> 
+           <input name="" value=""> 
+          </div> </th> 
+         <th id="functional_th_td" style="min-width:60px;border-top-right-radius: 1rem;"> <a style="display:none;margin-top:8px;margin-bottom:0;" method="GET"> <button class="more_button" type="submit" style=""> جستجو </button> </a> 0 </th> 
+        </tr> 
+        <tr>
+         <td>1</td>
+         <td>579</td>
+         <td>hasanlo</td>
+         <td>1705847571</td>
+         <td>ترمینال جدید</td> 
+         <td id="functional_th_td" style="z-index:50;height: 28px;left:0;position: sticky;"> 
+          <form action="view.php#579" style="margin-bottom:0;" method="GET"> 
+           <button id="more_button49" onclick="toggleTheFunctionalMenu1(49);" type="button" class="more_button" name="aWRjb2Rl" value="4270086610"> بیشتر </button> 
+           <input type="hidden" name="c2lk" value="579" style=""> 
+          </form> 
+          <div id="TheFunctionalMenu149" value="579" class="slidemenu_table" style="width: 300px;"> 
+           <form action="/membership/bank/PaymentTerminal/V1/summary/" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);" method="GET"> 
+            <button class="more_button" name="aWRjb2Rl" value="4270086610"> نمایش </button> 
+            <input type="hidden" name="c2lk" value="579" style=""> 
+           </form> 
+           <form action="accept/" method="POST" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);"> 
+            <button class="more_button" name="c2lk" value="579"> تأیید </button> 
+           </form> 
+           <form action="delete/" method="POST" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);"> 
+            <button class="more_button" name="c2lk" value="579"> حذف </button> 
+           </form> 
+          </div> </td> 
+        </tr>
+        <tr>
+         <td>2</td>
+         <td>578</td>
+         <td>shahriyar bahrami</td>
+         <td>1705829822</td>
+         <td>ترمینال جدید</td> 
+         <td id="functional_th_td" style="z-index:50;height: 28px;left:0;position: sticky;"> 
+          <form action="view.php#578" style="margin-bottom:0;" method="GET"> 
+           <button id="more_button48" onclick="toggleTheFunctionalMenu1(48);" type="button" class="more_button" name="aWRjb2Rl" value="2980240516"> بیشتر </button> 
+           <input type="hidden" name="c2lk" value="578" style=""> 
+          </form> 
+          <div id="TheFunctionalMenu148" value="578" class="slidemenu_table" style="width: 300px;"> 
+           <form action="/membership/bank/PaymentTerminal/V1/summary/" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);" method="GET"> 
+            <button class="more_button" name="aWRjb2Rl" value="2980240516"> نمایش </button> 
+            <input type="hidden" name="c2lk" value="578" style=""> 
+           </form> 
+           <form action="accept/" method="POST" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);"> 
+            <button class="more_button" name="c2lk" value="578"> تأیید </button> 
+           </form> 
+           <form action="delete/" method="POST" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);"> 
+            <button class="more_button" name="c2lk" value="578"> حذف </button> 
+           </form> 
+          </div> </td> 
+        </tr>
+        <tr>
+         <td>3</td>
+         <td>577</td>
+         <td>amir rashedi</td>
+         <td>1705775211</td>
+         <td>ترمینال جدید</td> 
+         <td id="functional_th_td" style="z-index:50;height: 28px;left:0;position: sticky;"> 
+          <form action="view.php#577" style="margin-bottom:0;" method="GET"> 
+           <button id="more_button47" onclick="toggleTheFunctionalMenu1(47);" type="button" class="more_button" name="aWRjb2Rl" value="6580014903"> بیشتر </button> 
+           <input type="hidden" name="c2lk" value="577" style=""> 
+          </form> 
+          <div id="TheFunctionalMenu147" value="577" class="slidemenu_table" style="width: 300px;"> 
+           <form action="/membership/bank/PaymentTerminal/V1/summary/" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);" method="GET"> 
+            <button class="more_button" name="aWRjb2Rl" value="6580014903"> نمایش </button> 
+            <input type="hidden" name="c2lk" value="577" style=""> 
+           </form> 
+           <form action="accept/" method="POST" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);"> 
+            <button class="more_button" name="c2lk" value="577"> تأیید </button> 
+           </form> 
+           <form action="delete/" method="POST" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);"> 
+            <button class="more_button" name="c2lk" value="577"> حذف </button> 
+           </form> 
+          </div> </td> 
+        </tr>
+        <tr>
+         <td>4</td>
+         <td>576</td>
+         <td>amir rashedi</td>
+         <td>1705773070</td>
+         <td>ترمینال جدید</td> 
+         <td id="functional_th_td" style="z-index:50;height: 28px;left:0;position: sticky;"> 
+          <form action="view.php#576" style="margin-bottom:0;" method="GET"> 
+           <button id="more_button46" onclick="toggleTheFunctionalMenu1(46);" type="button" class="more_button" name="aWRjb2Rl" value="0926675885"> بیشتر </button> 
+           <input type="hidden" name="c2lk" value="576" style=""> 
+          </form> 
+          <div id="TheFunctionalMenu146" value="576" class="slidemenu_table" style="width: 300px;"> 
+           <form action="/membership/bank/PaymentTerminal/V1/summary/" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);" method="GET"> 
+            <button class="more_button" name="aWRjb2Rl" value="0926675885"> نمایش </button> 
+            <input type="hidden" name="c2lk" value="576" style=""> 
+           </form> 
+           <form action="accept/" method="POST" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);"> 
+            <button class="more_button" name="c2lk" value="576"> تأیید </button> 
+           </form> 
+           <form action="delete/" method="POST" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);"> 
+            <button class="more_button" name="c2lk" value="576"> حذف </button> 
+           </form> 
+          </div> </td> 
+        </tr>
+        <tr>
+         <td>5</td>
+         <td>575</td>
+         <td>hasanlo</td>
+         <td>1705752506</td>
+         <td>ترمینال جدید</td> 
+         <td id="functional_th_td" style="z-index:50;height: 28px;left:0;position: sticky;"> 
+          <form action="view.php#575" style="margin-bottom:0;" method="GET"> 
+           <button id="more_button45" onclick="toggleTheFunctionalMenu1(45);" type="button" class="more_button" name="aWRjb2Rl" value="6149894932"> بیشتر </button> 
+           <input type="hidden" name="c2lk" value="575" style=""> 
+          </form> 
+          <div id="TheFunctionalMenu145" value="575" class="slidemenu_table" style="width: 300px;"> 
+           <form action="/membership/bank/PaymentTerminal/V1/summary/" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);" method="GET"> 
+            <button class="more_button" name="aWRjb2Rl" value="6149894932"> نمایش </button> 
+            <input type="hidden" name="c2lk" value="575" style=""> 
+           </form> 
+           <form action="accept/" method="POST" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);"> 
+            <button class="more_button" name="c2lk" value="575"> تأیید </button> 
+           </form> 
+           <form action="delete/" method="POST" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);"> 
+            <button class="more_button" name="c2lk" value="575"> حذف </button> 
+           </form> 
+          </div> </td> 
+        </tr>
+        <tr>
+         <td>6</td>
+         <td>574</td>
+         <td>abron</td>
+         <td>1705728531</td>
+         <td>ترمینال جدید</td> 
+         <td id="functional_th_td" style="z-index:50;height: 28px;left:0;position: sticky;"> 
+          <form action="view.php#574" style="margin-bottom:0;" method="GET"> 
+           <button id="more_button44" onclick="toggleTheFunctionalMenu1(44);" type="button" class="more_button" name="aWRjb2Rl" value="3591529941"> بیشتر </button> 
+           <input type="hidden" name="c2lk" value="574" style=""> 
+          </form> 
+          <div id="TheFunctionalMenu144" value="574" class="slidemenu_table" style="width: 300px;"> 
+           <form action="/membership/bank/PaymentTerminal/V1/summary/" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);" method="GET"> 
+            <button class="more_button" name="aWRjb2Rl" value="3591529941"> نمایش </button> 
+            <input type="hidden" name="c2lk" value="574" style=""> 
+           </form> 
+           <form action="accept/" method="POST" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);"> 
+            <button class="more_button" name="c2lk" value="574"> تأیید </button> 
+           </form> 
+           <form action="delete/" method="POST" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);"> 
+            <button class="more_button" name="c2lk" value="574"> حذف </button> 
+           </form> 
+          </div> </td> 
+        </tr>
+        <tr>
+         <td>7</td>
+         <td>573</td>
+         <td>razmjo</td>
+         <td>1705593025</td>
+         <td>ترمینال جدید</td> 
+         <td id="functional_th_td" style="z-index:50;height: 28px;left:0;position: sticky;"> 
+          <form action="view.php#573" style="margin-bottom:0;" method="GET"> 
+           <button id="more_button43" onclick="toggleTheFunctionalMenu1(43);" type="button" class="more_button" name="aWRjb2Rl" value="4950150413"> بیشتر </button> 
+           <input type="hidden" name="c2lk" value="573" style=""> 
+          </form> 
+          <div id="TheFunctionalMenu143" value="573" class="slidemenu_table" style="width: 300px;"> 
+           <form action="/membership/bank/PaymentTerminal/V1/summary/" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);" method="GET"> 
+            <button class="more_button" name="aWRjb2Rl" value="4950150413"> نمایش </button> 
+            <input type="hidden" name="c2lk" value="573" style=""> 
+           </form> 
+           <form action="accept/" method="POST" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);"> 
+            <button class="more_button" name="c2lk" value="573"> تأیید </button> 
+           </form> 
+           <form action="delete/" method="POST" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);"> 
+            <button class="more_button" name="c2lk" value="573"> حذف </button> 
+           </form> 
+          </div> </td> 
+        </tr>
+        <tr>
+         <td>8</td>
+         <td>572</td>
+         <td>hasanlo</td>
+         <td>1705519932</td>
+         <td>ترمینال جدید</td> 
+         <td id="functional_th_td" style="z-index:50;height: 28px;left:0;position: sticky;"> 
+          <form action="view.php#572" style="margin-bottom:0;" method="GET"> 
+           <button id="more_button42" onclick="toggleTheFunctionalMenu1(42);" type="button" class="more_button" name="aWRjb2Rl" value="4270638389"> بیشتر </button> 
+           <input type="hidden" name="c2lk" value="572" style=""> 
+          </form> 
+          <div id="TheFunctionalMenu142" value="572" class="slidemenu_table" style="width: 300px;"> 
+           <form action="/membership/bank/PaymentTerminal/V1/summary/" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);" method="GET"> 
+            <button class="more_button" name="aWRjb2Rl" value="4270638389"> نمایش </button> 
+            <input type="hidden" name="c2lk" value="572" style=""> 
+           </form> 
+           <form action="accept/" method="POST" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);"> 
+            <button class="more_button" name="c2lk" value="572"> تأیید </button> 
+           </form> 
+           <form action="delete/" method="POST" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);"> 
+            <button class="more_button" name="c2lk" value="572"> حذف </button> 
+           </form> 
+          </div> </td> 
+        </tr>
+        <tr>
+         <td>9</td>
+         <td>571</td>
+         <td>hasanlo</td>
+         <td>1705487292</td>
+         <td>ترمینال جدید</td> 
+         <td id="functional_th_td" style="z-index:50;height: 28px;left:0;position: sticky;"> 
+          <form action="view.php#571" style="margin-bottom:0;" method="GET"> 
+           <button id="more_button41" onclick="toggleTheFunctionalMenu1(41);" type="button" class="more_button" name="aWRjb2Rl" value="4283625612"> بیشتر </button> 
+           <input type="hidden" name="c2lk" value="571" style=""> 
+          </form> 
+          <div id="TheFunctionalMenu141" value="571" class="slidemenu_table" style="width: 300px;"> 
+           <form action="/membership/bank/PaymentTerminal/V1/summary/" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);" method="GET"> 
+            <button class="more_button" name="aWRjb2Rl" value="4283625612"> نمایش </button> 
+            <input type="hidden" name="c2lk" value="571" style=""> 
+           </form> 
+           <form action="accept/" method="POST" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);"> 
+            <button class="more_button" name="c2lk" value="571"> تأیید </button> 
+           </form> 
+           <form action="delete/" method="POST" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);"> 
+            <button class="more_button" name="c2lk" value="571"> حذف </button> 
+           </form> 
+          </div> </td> 
+        </tr>
+        <tr>
+         <td>10</td>
+         <td>570</td>
+         <td>hasanlo</td>
+         <td>1705482183</td>
+         <td>ترمینال جدید</td> 
+         <td id="functional_th_td" style="z-index:50;height: 28px;left:0;position: sticky;"> 
+          <form action="view.php#570" style="margin-bottom:0;" method="GET"> 
+           <button id="more_button40" onclick="toggleTheFunctionalMenu1(40);" type="button" class="more_button" name="aWRjb2Rl" value="5899715618"> بیشتر </button> 
+           <input type="hidden" name="c2lk" value="570" style=""> 
+          </form> 
+          <div id="TheFunctionalMenu140" value="570" class="slidemenu_table" style="width: 300px;"> 
+           <form action="/membership/bank/PaymentTerminal/V1/summary/" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);" method="GET"> 
+            <button class="more_button" name="aWRjb2Rl" value="5899715618"> نمایش </button> 
+            <input type="hidden" name="c2lk" value="570" style=""> 
+           </form> 
+           <form action="accept/" method="POST" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);"> 
+            <button class="more_button" name="c2lk" value="570"> تأیید </button> 
+           </form> 
+           <form action="delete/" method="POST" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);"> 
+            <button class="more_button" name="c2lk" value="570"> حذف </button> 
+           </form> 
+          </div> </td> 
+        </tr>
+        <tr>
+         <td>11</td>
+         <td>569</td>
+         <td>razmjo</td>
+         <td>1705475884</td>
+         <td>ترمینال جدید</td> 
+         <td id="functional_th_td" style="z-index:50;height: 28px;left:0;position: sticky;"> 
+          <form action="view.php#569" style="margin-bottom:0;" method="GET"> 
+           <button id="more_button39" onclick="toggleTheFunctionalMenu1(39);" type="button" class="more_button" name="aWRjb2Rl" value="4950131605"> بیشتر </button> 
+           <input type="hidden" name="c2lk" value="569" style=""> 
+          </form> 
+          <div id="TheFunctionalMenu139" value="569" class="slidemenu_table" style="width: 300px;"> 
+           <form action="/membership/bank/PaymentTerminal/V1/summary/" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);" method="GET"> 
+            <button class="more_button" name="aWRjb2Rl" value="4950131605"> نمایش </button> 
+            <input type="hidden" name="c2lk" value="569" style=""> 
+           </form> 
+           <form action="accept/" method="POST" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);"> 
+            <button class="more_button" name="c2lk" value="569"> تأیید </button> 
+           </form> 
+           <form action="delete/" method="POST" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);"> 
+            <button class="more_button" name="c2lk" value="569"> حذف </button> 
+           </form> 
+          </div> </td> 
+        </tr>
+        <tr>
+         <td>12</td>
+         <td>568</td>
+         <td>hasanlo</td>
+         <td>1705326359</td>
+         <td>ترمینال جدید</td> 
+         <td id="functional_th_td" style="z-index:50;height: 28px;left:0;position: sticky;"> 
+          <form action="view.php#568" style="margin-bottom:0;" method="GET"> 
+           <button id="more_button38" onclick="toggleTheFunctionalMenu1(38);" type="button" class="more_button" name="aWRjb2Rl" value="4270069872"> بیشتر </button> 
+           <input type="hidden" name="c2lk" value="568" style=""> 
+          </form> 
+          <div id="TheFunctionalMenu138" value="568" class="slidemenu_table" style="width: 300px;"> 
+           <form action="/membership/bank/PaymentTerminal/V1/summary/" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);" method="GET"> 
+            <button class="more_button" name="aWRjb2Rl" value="4270069872"> نمایش </button> 
+            <input type="hidden" name="c2lk" value="568" style=""> 
+           </form> 
+           <form action="accept/" method="POST" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);"> 
+            <button class="more_button" name="c2lk" value="568"> تأیید </button> 
+           </form> 
+           <form action="delete/" method="POST" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);"> 
+            <button class="more_button" name="c2lk" value="568"> حذف </button> 
+           </form> 
+          </div> </td> 
+        </tr>
+        <tr>
+         <td>13</td>
+         <td>567</td>
+         <td>farzadrafati</td>
+         <td>1705226969</td>
+         <td>ترمینال جدید</td> 
+         <td id="functional_th_td" style="z-index:50;height: 28px;left:0;position: sticky;"> 
+          <form action="view.php#567" style="margin-bottom:0;" method="GET"> 
+           <button id="more_button37" onclick="toggleTheFunctionalMenu1(37);" type="button" class="more_button" name="aWRjb2Rl" value="3860673769"> بیشتر </button> 
+           <input type="hidden" name="c2lk" value="567" style=""> 
+          </form> 
+          <div id="TheFunctionalMenu137" value="567" class="slidemenu_table" style="width: 300px;"> 
+           <form action="/membership/bank/PaymentTerminal/V1/summary/" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);" method="GET"> 
+            <button class="more_button" name="aWRjb2Rl" value="3860673769"> نمایش </button> 
+            <input type="hidden" name="c2lk" value="567" style=""> 
+           </form> 
+           <form action="accept/" method="POST" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);"> 
+            <button class="more_button" name="c2lk" value="567"> تأیید </button> 
+           </form> 
+           <form action="delete/" method="POST" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);"> 
+            <button class="more_button" name="c2lk" value="567"> حذف </button> 
+           </form> 
+          </div> </td> 
+        </tr>
+        <tr>
+         <td>14</td>
+         <td>566</td>
+         <td>rabehi</td>
+         <td>1705225600</td>
+         <td>ترمینال جدید</td> 
+         <td id="functional_th_td" style="z-index:50;height: 28px;left:0;position: sticky;"> 
+          <form action="view.php#566" style="margin-bottom:0;" method="GET"> 
+           <button id="more_button36" onclick="toggleTheFunctionalMenu1(36);" type="button" class="more_button" name="aWRjb2Rl" value="1743524668"> بیشتر </button> 
+           <input type="hidden" name="c2lk" value="566" style=""> 
+          </form> 
+          <div id="TheFunctionalMenu136" value="566" class="slidemenu_table" style="width: 300px;"> 
+           <form action="/membership/bank/PaymentTerminal/V1/summary/" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);" method="GET"> 
+            <button class="more_button" name="aWRjb2Rl" value="1743524668"> نمایش </button> 
+            <input type="hidden" name="c2lk" value="566" style=""> 
+           </form> 
+           <form action="accept/" method="POST" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);"> 
+            <button class="more_button" name="c2lk" value="566"> تأیید </button> 
+           </form> 
+           <form action="delete/" method="POST" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);"> 
+            <button class="more_button" name="c2lk" value="566"> حذف </button> 
+           </form> 
+          </div> </td> 
+        </tr>
+        <tr>
+         <td>15</td>
+         <td>565</td>
+         <td>hasanlo</td>
+         <td>1705179657</td>
+         <td>ترمینال جدید</td> 
+         <td id="functional_th_td" style="z-index:50;height: 28px;left:0;position: sticky;"> 
+          <form action="view.php#565" style="margin-bottom:0;" method="GET"> 
+           <button id="more_button35" onclick="toggleTheFunctionalMenu1(35);" type="button" class="more_button" name="aWRjb2Rl" value="4271220604"> بیشتر </button> 
+           <input type="hidden" name="c2lk" value="565" style=""> 
+          </form> 
+          <div id="TheFunctionalMenu135" value="565" class="slidemenu_table" style="width: 300px;"> 
+           <form action="/membership/bank/PaymentTerminal/V1/summary/" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);" method="GET"> 
+            <button class="more_button" name="aWRjb2Rl" value="4271220604"> نمایش </button> 
+            <input type="hidden" name="c2lk" value="565" style=""> 
+           </form> 
+           <form action="accept/" method="POST" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);"> 
+            <button class="more_button" name="c2lk" value="565"> تأیید </button> 
+           </form> 
+           <form action="delete/" method="POST" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);"> 
+            <button class="more_button" name="c2lk" value="565"> حذف </button> 
+           </form> 
+          </div> </td> 
+        </tr>
+        <tr>
+         <td>16</td>
+         <td>564</td>
+         <td>hasanlo</td>
+         <td>1705150439</td>
+         <td>ترمینال جدید</td> 
+         <td id="functional_th_td" style="z-index:50;height: 28px;left:0;position: sticky;"> 
+          <form action="view.php#564" style="margin-bottom:0;" method="GET"> 
+           <button id="more_button34" onclick="toggleTheFunctionalMenu1(34);" type="button" class="more_button" name="aWRjb2Rl" value="4285378345"> بیشتر </button> 
+           <input type="hidden" name="c2lk" value="564" style=""> 
+          </form> 
+          <div id="TheFunctionalMenu134" value="564" class="slidemenu_table" style="width: 300px;"> 
+           <form action="/membership/bank/PaymentTerminal/V1/summary/" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);" method="GET"> 
+            <button class="more_button" name="aWRjb2Rl" value="4285378345"> نمایش </button> 
+            <input type="hidden" name="c2lk" value="564" style=""> 
+           </form> 
+           <form action="accept/" method="POST" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);"> 
+            <button class="more_button" name="c2lk" value="564"> تأیید </button> 
+           </form> 
+           <form action="delete/" method="POST" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);"> 
+            <button class="more_button" name="c2lk" value="564"> حذف </button> 
+           </form> 
+          </div> </td> 
+        </tr>
+        <tr>
+         <td>17</td>
+         <td>563</td>
+         <td>razmjo</td>
+         <td>1705132661</td>
+         <td>ترمینال جدید</td> 
+         <td id="functional_th_td" style="z-index:50;height: 28px;left:0;position: sticky;"> 
+          <form action="view.php#563" style="margin-bottom:0;" method="GET"> 
+           <button id="more_button33" onclick="toggleTheFunctionalMenu1(33);" type="button" class="more_button" name="aWRjb2Rl" value="4959965606"> بیشتر </button> 
+           <input type="hidden" name="c2lk" value="563" style=""> 
+          </form> 
+          <div id="TheFunctionalMenu133" value="563" class="slidemenu_table" style="width: 300px;"> 
+           <form action="/membership/bank/PaymentTerminal/V1/summary/" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);" method="GET"> 
+            <button class="more_button" name="aWRjb2Rl" value="4959965606"> نمایش </button> 
+            <input type="hidden" name="c2lk" value="563" style=""> 
+           </form> 
+           <form action="accept/" method="POST" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);"> 
+            <button class="more_button" name="c2lk" value="563"> تأیید </button> 
+           </form> 
+           <form action="delete/" method="POST" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);"> 
+            <button class="more_button" name="c2lk" value="563"> حذف </button> 
+           </form> 
+          </div> </td> 
+        </tr>
+        <tr>
+         <td>18</td>
+         <td>562</td>
+         <td>farzadrafati</td>
+         <td>1705094558</td>
+         <td>ترمینال جدید</td> 
+         <td id="functional_th_td" style="z-index:50;height: 28px;left:0;position: sticky;"> 
+          <form action="view.php#562" style="margin-bottom:0;" method="GET"> 
+           <button id="more_button32" onclick="toggleTheFunctionalMenu1(32);" type="button" class="more_button" name="aWRjb2Rl" value="0059311908"> بیشتر </button> 
+           <input type="hidden" name="c2lk" value="562" style=""> 
+          </form> 
+          <div id="TheFunctionalMenu132" value="562" class="slidemenu_table" style="width: 300px;"> 
+           <form action="/membership/bank/PaymentTerminal/V1/summary/" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);" method="GET"> 
+            <button class="more_button" name="aWRjb2Rl" value="0059311908"> نمایش </button> 
+            <input type="hidden" name="c2lk" value="562" style=""> 
+           </form> 
+           <form action="accept/" method="POST" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);"> 
+            <button class="more_button" name="c2lk" value="562"> تأیید </button> 
+           </form> 
+           <form action="delete/" method="POST" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);"> 
+            <button class="more_button" name="c2lk" value="562"> حذف </button> 
+           </form> 
+          </div> </td> 
+        </tr>
+        <tr>
+         <td>19</td>
+         <td>561</td>
+         <td>razmjo</td>
+         <td>1704982729</td>
+         <td>ترمینال جدید</td> 
+         <td id="functional_th_td" style="z-index:50;height: 28px;left:0;position: sticky;"> 
+          <form action="view.php#561" style="margin-bottom:0;" method="GET"> 
+           <button id="more_button31" onclick="toggleTheFunctionalMenu1(31);" type="button" class="more_button" name="aWRjb2Rl" value="4950184751"> بیشتر </button> 
+           <input type="hidden" name="c2lk" value="561" style=""> 
+          </form> 
+          <div id="TheFunctionalMenu131" value="561" class="slidemenu_table" style="width: 300px;"> 
+           <form action="/membership/bank/PaymentTerminal/V1/summary/" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);" method="GET"> 
+            <button class="more_button" name="aWRjb2Rl" value="4950184751"> نمایش </button> 
+            <input type="hidden" name="c2lk" value="561" style=""> 
+           </form> 
+           <form action="accept/" method="POST" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);"> 
+            <button class="more_button" name="c2lk" value="561"> تأیید </button> 
+           </form> 
+           <form action="delete/" method="POST" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);"> 
+            <button class="more_button" name="c2lk" value="561"> حذف </button> 
+           </form> 
+          </div> </td> 
+        </tr>
+        <tr>
+         <td>20</td>
+         <td>560</td>
+         <td>rabehi</td>
+         <td>1704955413</td>
+         <td>ترمینال جدید</td> 
+         <td id="functional_th_td" style="z-index:50;height: 28px;left:0;position: sticky;"> 
+          <form action="view.php#560" style="margin-bottom:0;" method="GET"> 
+           <button id="more_button30" onclick="toggleTheFunctionalMenu1(30);" type="button" class="more_button" name="aWRjb2Rl" value="4950184751"> بیشتر </button> 
+           <input type="hidden" name="c2lk" value="560" style=""> 
+          </form> 
+          <div id="TheFunctionalMenu130" value="560" class="slidemenu_table" style="width: 300px;"> 
+           <form action="/membership/bank/PaymentTerminal/V1/summary/" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);" method="GET"> 
+            <button class="more_button" name="aWRjb2Rl" value="4950184751"> نمایش </button> 
+            <input type="hidden" name="c2lk" value="560" style=""> 
+           </form> 
+           <form action="accept/" method="POST" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);"> 
+            <button class="more_button" name="c2lk" value="560"> تأیید </button> 
+           </form> 
+           <form action="delete/" method="POST" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);"> 
+            <button class="more_button" name="c2lk" value="560"> حذف </button> 
+           </form> 
+          </div> </td> 
+        </tr>
+        <tr>
+         <td>21</td>
+         <td>559</td>
+         <td>pnp.mortezaabasi</td>
+         <td>1704871909</td>
+         <td>ترمینال جدید</td> 
+         <td id="functional_th_td" style="z-index:50;height: 28px;left:0;position: sticky;"> 
+          <form action="view.php#559" style="margin-bottom:0;" method="GET"> 
+           <button id="more_button29" onclick="toggleTheFunctionalMenu1(29);" type="button" class="more_button" name="aWRjb2Rl" value="6368808942"> بیشتر </button> 
+           <input type="hidden" name="c2lk" value="559" style=""> 
+          </form> 
+          <div id="TheFunctionalMenu129" value="559" class="slidemenu_table" style="width: 300px;"> 
+           <form action="/membership/bank/PaymentTerminal/V1/summary/" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);" method="GET"> 
+            <button class="more_button" name="aWRjb2Rl" value="6368808942"> نمایش </button> 
+            <input type="hidden" name="c2lk" value="559" style=""> 
+           </form> 
+           <form action="accept/" method="POST" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);"> 
+            <button class="more_button" name="c2lk" value="559"> تأیید </button> 
+           </form> 
+           <form action="delete/" method="POST" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);"> 
+            <button class="more_button" name="c2lk" value="559"> حذف </button> 
+           </form> 
+          </div> </td> 
+        </tr>
+        <tr>
+         <td>22</td>
+         <td>558</td>
+         <td>razmjo</td>
+         <td>1704791344</td>
+         <td>ترمینال جدید</td> 
+         <td id="functional_th_td" style="z-index:50;height: 28px;left:0;position: sticky;"> 
+          <form action="view.php#558" style="margin-bottom:0;" method="GET"> 
+           <button id="more_button28" onclick="toggleTheFunctionalMenu1(28);" type="button" class="more_button" name="aWRjb2Rl" value="3330390662"> بیشتر </button> 
+           <input type="hidden" name="c2lk" value="558" style=""> 
+          </form> 
+          <div id="TheFunctionalMenu128" value="558" class="slidemenu_table" style="width: 300px;"> 
+           <form action="/membership/bank/PaymentTerminal/V1/summary/" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);" method="GET"> 
+            <button class="more_button" name="aWRjb2Rl" value="3330390662"> نمایش </button> 
+            <input type="hidden" name="c2lk" value="558" style=""> 
+           </form> 
+           <form action="accept/" method="POST" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);"> 
+            <button class="more_button" name="c2lk" value="558"> تأیید </button> 
+           </form> 
+           <form action="delete/" method="POST" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);"> 
+            <button class="more_button" name="c2lk" value="558"> حذف </button> 
+           </form> 
+          </div> </td> 
+        </tr>
+        <tr>
+         <td>23</td>
+         <td>557</td>
+         <td>bistoni</td>
+         <td>1704726825</td>
+         <td>ترمینال جدید</td> 
+         <td id="functional_th_td" style="z-index:50;height: 28px;left:0;position: sticky;"> 
+          <form action="view.php#557" style="margin-bottom:0;" method="GET"> 
+           <button id="more_button27" onclick="toggleTheFunctionalMenu1(27);" type="button" class="more_button" name="aWRjb2Rl" value="3489671597"> بیشتر </button> 
+           <input type="hidden" name="c2lk" value="557" style=""> 
+          </form> 
+          <div id="TheFunctionalMenu127" value="557" class="slidemenu_table" style="width: 300px;"> 
+           <form action="/membership/bank/PaymentTerminal/V1/summary/" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);" method="GET"> 
+            <button class="more_button" name="aWRjb2Rl" value="3489671597"> نمایش </button> 
+            <input type="hidden" name="c2lk" value="557" style=""> 
+           </form> 
+           <form action="accept/" method="POST" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);"> 
+            <button class="more_button" name="c2lk" value="557"> تأیید </button> 
+           </form> 
+           <form action="delete/" method="POST" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);"> 
+            <button class="more_button" name="c2lk" value="557"> حذف </button> 
+           </form> 
+          </div> </td> 
+        </tr>
+        <tr>
+         <td>24</td>
+         <td>556</td>
+         <td>amir rashedi</td>
+         <td>1704724109</td>
+         <td>ترمینال جدید</td> 
+         <td id="functional_th_td" style="z-index:50;height: 28px;left:0;position: sticky;"> 
+          <form action="view.php#556" style="margin-bottom:0;" method="GET"> 
+           <button id="more_button26" onclick="toggleTheFunctionalMenu1(26);" type="button" class="more_button" name="aWRjb2Rl" value="0936111380"> بیشتر </button> 
+           <input type="hidden" name="c2lk" value="556" style=""> 
+          </form> 
+          <div id="TheFunctionalMenu126" value="556" class="slidemenu_table" style="width: 300px;"> 
+           <form action="/membership/bank/PaymentTerminal/V1/summary/" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);" method="GET"> 
+            <button class="more_button" name="aWRjb2Rl" value="0936111380"> نمایش </button> 
+            <input type="hidden" name="c2lk" value="556" style=""> 
+           </form> 
+           <form action="accept/" method="POST" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);"> 
+            <button class="more_button" name="c2lk" value="556"> تأیید </button> 
+           </form> 
+           <form action="delete/" method="POST" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);"> 
+            <button class="more_button" name="c2lk" value="556"> حذف </button> 
+           </form> 
+          </div> </td> 
+        </tr>
+        <tr>
+         <td>25</td>
+         <td>555</td>
+         <td>razmjo</td>
+         <td>1704697468</td>
+         <td>ترمینال جدید</td> 
+         <td id="functional_th_td" style="z-index:50;height: 28px;left:0;position: sticky;"> 
+          <form action="view.php#555" style="margin-bottom:0;" method="GET"> 
+           <button id="more_button25" onclick="toggleTheFunctionalMenu1(25);" type="button" class="more_button" name="aWRjb2Rl" value="3242203682"> بیشتر </button> 
+           <input type="hidden" name="c2lk" value="555" style=""> 
+          </form> 
+          <div id="TheFunctionalMenu125" value="555" class="slidemenu_table" style="width: 300px;"> 
+           <form action="/membership/bank/PaymentTerminal/V1/summary/" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);" method="GET"> 
+            <button class="more_button" name="aWRjb2Rl" value="3242203682"> نمایش </button> 
+            <input type="hidden" name="c2lk" value="555" style=""> 
+           </form> 
+           <form action="accept/" method="POST" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);"> 
+            <button class="more_button" name="c2lk" value="555"> تأیید </button> 
+           </form> 
+           <form action="delete/" method="POST" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);"> 
+            <button class="more_button" name="c2lk" value="555"> حذف </button> 
+           </form> 
+          </div> </td> 
+        </tr>
+        <tr>
+         <td>26</td>
+         <td>554</td>
+         <td>mohamadsalehi</td>
+         <td>1704637516</td>
+         <td>ترمینال جدید</td> 
+         <td id="functional_th_td" style="z-index:50;height: 28px;left:0;position: sticky;"> 
+          <form action="view.php#554" style="margin-bottom:0;" method="GET"> 
+           <button id="more_button24" onclick="toggleTheFunctionalMenu1(24);" type="button" class="more_button" name="aWRjb2Rl" value="0860579484"> بیشتر </button> 
+           <input type="hidden" name="c2lk" value="554" style=""> 
+          </form> 
+          <div id="TheFunctionalMenu124" value="554" class="slidemenu_table" style="width: 300px;"> 
+           <form action="/membership/bank/PaymentTerminal/V1/summary/" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);" method="GET"> 
+            <button class="more_button" name="aWRjb2Rl" value="0860579484"> نمایش </button> 
+            <input type="hidden" name="c2lk" value="554" style=""> 
+           </form> 
+           <form action="accept/" method="POST" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);"> 
+            <button class="more_button" name="c2lk" value="554"> تأیید </button> 
+           </form> 
+           <form action="delete/" method="POST" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);"> 
+            <button class="more_button" name="c2lk" value="554"> حذف </button> 
+           </form> 
+          </div> </td> 
+        </tr>
+        <tr>
+         <td>27</td>
+         <td>553</td>
+         <td>ardame</td>
+         <td>1704615799</td>
+         <td>ترمینال جدید</td> 
+         <td id="functional_th_td" style="z-index:50;height: 28px;left:0;position: sticky;"> 
+          <form action="view.php#553" style="margin-bottom:0;" method="GET"> 
+           <button id="more_button23" onclick="toggleTheFunctionalMenu1(23);" type="button" class="more_button" name="aWRjb2Rl" value="1610327756"> بیشتر </button> 
+           <input type="hidden" name="c2lk" value="553" style=""> 
+          </form> 
+          <div id="TheFunctionalMenu123" value="553" class="slidemenu_table" style="width: 300px;"> 
+           <form action="/membership/bank/PaymentTerminal/V1/summary/" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);" method="GET"> 
+            <button class="more_button" name="aWRjb2Rl" value="1610327756"> نمایش </button> 
+            <input type="hidden" name="c2lk" value="553" style=""> 
+           </form> 
+           <form action="accept/" method="POST" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);"> 
+            <button class="more_button" name="c2lk" value="553"> تأیید </button> 
+           </form> 
+           <form action="delete/" method="POST" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);"> 
+            <button class="more_button" name="c2lk" value="553"> حذف </button> 
+           </form> 
+          </div> </td> 
+        </tr>
+        <tr>
+         <td>28</td>
+         <td>552</td>
+         <td>rabehi</td>
+         <td>1704557970</td>
+         <td>ترمینال جدید</td> 
+         <td id="functional_th_td" style="z-index:50;height: 28px;left:0;position: sticky;"> 
+          <form action="view.php#552" style="margin-bottom:0;" method="GET"> 
+           <button id="more_button22" onclick="toggleTheFunctionalMenu1(22);" type="button" class="more_button" name="aWRjb2Rl" value="1757741844"> بیشتر </button> 
+           <input type="hidden" name="c2lk" value="552" style=""> 
+          </form> 
+          <div id="TheFunctionalMenu122" value="552" class="slidemenu_table" style="width: 300px;"> 
+           <form action="/membership/bank/PaymentTerminal/V1/summary/" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);" method="GET"> 
+            <button class="more_button" name="aWRjb2Rl" value="1757741844"> نمایش </button> 
+            <input type="hidden" name="c2lk" value="552" style=""> 
+           </form> 
+           <form action="accept/" method="POST" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);"> 
+            <button class="more_button" name="c2lk" value="552"> تأیید </button> 
+           </form> 
+           <form action="delete/" method="POST" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);"> 
+            <button class="more_button" name="c2lk" value="552"> حذف </button> 
+           </form> 
+          </div> </td> 
+        </tr>
+        <tr>
+         <td>29</td>
+         <td>551</td>
+         <td>Rabehi</td>
+         <td>1704554338</td>
+         <td>ترمینال جدید</td> 
+         <td id="functional_th_td" style="z-index:50;height: 28px;left:0;position: sticky;"> 
+          <form action="view.php#551" style="margin-bottom:0;" method="GET"> 
+           <button id="more_button21" onclick="toggleTheFunctionalMenu1(21);" type="button" class="more_button" name="aWRjb2Rl" value="1740096614"> بیشتر </button> 
+           <input type="hidden" name="c2lk" value="551" style=""> 
+          </form> 
+          <div id="TheFunctionalMenu121" value="551" class="slidemenu_table" style="width: 300px;"> 
+           <form action="/membership/bank/PaymentTerminal/V1/summary/" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);" method="GET"> 
+            <button class="more_button" name="aWRjb2Rl" value="1740096614"> نمایش </button> 
+            <input type="hidden" name="c2lk" value="551" style=""> 
+           </form> 
+           <form action="accept/" method="POST" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);"> 
+            <button class="more_button" name="c2lk" value="551"> تأیید </button> 
+           </form> 
+           <form action="delete/" method="POST" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);"> 
+            <button class="more_button" name="c2lk" value="551"> حذف </button> 
+           </form> 
+          </div> </td> 
+        </tr>
+        <tr>
+         <td>30</td>
+         <td>550</td>
+         <td>razmjo</td>
+         <td>1704358083</td>
+         <td>ترمینال جدید</td> 
+         <td id="functional_th_td" style="z-index:50;height: 28px;left:0;position: sticky;"> 
+          <form action="view.php#550" style="margin-bottom:0;" method="GET"> 
+           <button id="more_button20" onclick="toggleTheFunctionalMenu1(20);" type="button" class="more_button" name="aWRjb2Rl" value="3256313639"> بیشتر </button> 
+           <input type="hidden" name="c2lk" value="550" style=""> 
+          </form> 
+          <div id="TheFunctionalMenu120" value="550" class="slidemenu_table" style="width: 300px;"> 
+           <form action="/membership/bank/PaymentTerminal/V1/summary/" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);" method="GET"> 
+            <button class="more_button" name="aWRjb2Rl" value="3256313639"> نمایش </button> 
+            <input type="hidden" name="c2lk" value="550" style=""> 
+           </form> 
+           <form action="accept/" method="POST" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);"> 
+            <button class="more_button" name="c2lk" value="550"> تأیید </button> 
+           </form> 
+           <form action="delete/" method="POST" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);"> 
+            <button class="more_button" name="c2lk" value="550"> حذف </button> 
+           </form> 
+          </div> </td> 
+        </tr>
+        <tr>
+         <td>31</td>
+         <td>549</td>
+         <td>amir rashedi</td>
+         <td>1704288439</td>
+         <td>ترمینال جدید</td> 
+         <td id="functional_th_td" style="z-index:50;height: 28px;left:0;position: sticky;"> 
+          <form action="view.php#549" style="margin-bottom:0;" method="GET"> 
+           <button id="more_button19" onclick="toggleTheFunctionalMenu1(19);" type="button" class="more_button" name="aWRjb2Rl" value="0939745933"> بیشتر </button> 
+           <input type="hidden" name="c2lk" value="549" style=""> 
+          </form> 
+          <div id="TheFunctionalMenu119" value="549" class="slidemenu_table" style="width: 300px;"> 
+           <form action="/membership/bank/PaymentTerminal/V1/summary/" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);" method="GET"> 
+            <button class="more_button" name="aWRjb2Rl" value="0939745933"> نمایش </button> 
+            <input type="hidden" name="c2lk" value="549" style=""> 
+           </form> 
+           <form action="accept/" method="POST" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);"> 
+            <button class="more_button" name="c2lk" value="549"> تأیید </button> 
+           </form> 
+           <form action="delete/" method="POST" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);"> 
+            <button class="more_button" name="c2lk" value="549"> حذف </button> 
+           </form> 
+          </div> </td> 
+        </tr>
+        <tr>
+         <td>32</td>
+         <td>548</td>
+         <td>rabehi</td>
+         <td>1704266138</td>
+         <td>ترمینال جدید</td> 
+         <td id="functional_th_td" style="z-index:50;height: 28px;left:0;position: sticky;"> 
+          <form action="view.php#548" style="margin-bottom:0;" method="GET"> 
+           <button id="more_button18" onclick="toggleTheFunctionalMenu1(18);" type="button" class="more_button" name="aWRjb2Rl" value="0939745933"> بیشتر </button> 
+           <input type="hidden" name="c2lk" value="548" style=""> 
+          </form> 
+          <div id="TheFunctionalMenu118" value="548" class="slidemenu_table" style="width: 300px;"> 
+           <form action="/membership/bank/PaymentTerminal/V1/summary/" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);" method="GET"> 
+            <button class="more_button" name="aWRjb2Rl" value="0939745933"> نمایش </button> 
+            <input type="hidden" name="c2lk" value="548" style=""> 
+           </form> 
+           <form action="accept/" method="POST" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);"> 
+            <button class="more_button" name="c2lk" value="548"> تأیید </button> 
+           </form> 
+           <form action="delete/" method="POST" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);"> 
+            <button class="more_button" name="c2lk" value="548"> حذف </button> 
+           </form> 
+          </div> </td> 
+        </tr>
+        <tr>
+         <td>33</td>
+         <td>547</td>
+         <td>admin</td>
+         <td>1704214697</td>
+         <td>ترمینال جدید</td> 
+         <td id="functional_th_td" style="z-index:50;height: 28px;left:0;position: sticky;"> 
+          <form action="view.php#547" style="margin-bottom:0;" method="GET"> 
+           <button id="more_button17" onclick="toggleTheFunctionalMenu1(17);" type="button" class="more_button" name="aWRjb2Rl" value="+1 (923) 394-9427"> بیشتر </button> 
+           <input type="hidden" name="c2lk" value="547" style=""> 
+          </form> 
+          <div id="TheFunctionalMenu117" value="547" class="slidemenu_table" style="width: 300px;"> 
+           <form action="/membership/bank/PaymentTerminal/V1/summary/" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);" method="GET"> 
+            <button class="more_button" name="aWRjb2Rl" value="+1 (923) 394-9427"> نمایش </button> 
+            <input type="hidden" name="c2lk" value="547" style=""> 
+           </form> 
+           <form action="accept/" method="POST" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);"> 
+            <button class="more_button" name="c2lk" value="547"> تأیید </button> 
+           </form> 
+           <form action="delete/" method="POST" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);"> 
+            <button class="more_button" name="c2lk" value="547"> حذف </button> 
+           </form> 
+          </div> </td> 
+        </tr>
+        <tr>
+         <td>34</td>
+         <td>546</td>
+         <td>hasanlo</td>
+         <td>1704187680</td>
+         <td>ترمینال جدید</td> 
+         <td id="functional_th_td" style="z-index:50;height: 28px;left:0;position: sticky;"> 
+          <form action="view.php#546" style="margin-bottom:0;" method="GET"> 
+           <button id="more_button16" onclick="toggleTheFunctionalMenu1(16);" type="button" class="more_button" name="aWRjb2Rl" value="4283406856"> بیشتر </button> 
+           <input type="hidden" name="c2lk" value="546" style=""> 
+          </form> 
+          <div id="TheFunctionalMenu116" value="546" class="slidemenu_table" style="width: 300px;"> 
+           <form action="/membership/bank/PaymentTerminal/V1/summary/" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);" method="GET"> 
+            <button class="more_button" name="aWRjb2Rl" value="4283406856"> نمایش </button> 
+            <input type="hidden" name="c2lk" value="546" style=""> 
+           </form> 
+           <form action="accept/" method="POST" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);"> 
+            <button class="more_button" name="c2lk" value="546"> تأیید </button> 
+           </form> 
+           <form action="delete/" method="POST" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);"> 
+            <button class="more_button" name="c2lk" value="546"> حذف </button> 
+           </form> 
+          </div> </td> 
+        </tr>
+        <tr>
+         <td>35</td>
+         <td>545</td>
+         <td>reza bonjoyi</td>
+         <td>1704184490</td>
+         <td>ترمینال جدید</td> 
+         <td id="functional_th_td" style="z-index:50;height: 28px;left:0;position: sticky;"> 
+          <form action="view.php#545" style="margin-bottom:0;" method="GET"> 
+           <button id="more_button15" onclick="toggleTheFunctionalMenu1(15);" type="button" class="more_button" name="aWRjb2Rl" value="3559864739"> بیشتر </button> 
+           <input type="hidden" name="c2lk" value="545" style=""> 
+          </form> 
+          <div id="TheFunctionalMenu115" value="545" class="slidemenu_table" style="width: 300px;"> 
+           <form action="/membership/bank/PaymentTerminal/V1/summary/" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);" method="GET"> 
+            <button class="more_button" name="aWRjb2Rl" value="3559864739"> نمایش </button> 
+            <input type="hidden" name="c2lk" value="545" style=""> 
+           </form> 
+           <form action="accept/" method="POST" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);"> 
+            <button class="more_button" name="c2lk" value="545"> تأیید </button> 
+           </form> 
+           <form action="delete/" method="POST" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);"> 
+            <button class="more_button" name="c2lk" value="545"> حذف </button> 
+           </form> 
+          </div> </td> 
+        </tr>
+        <tr>
+         <td>36</td>
+         <td>544</td>
+         <td>reza bonjoyi</td>
+         <td>1704178015</td>
+         <td>ترمینال جدید</td> 
+         <td id="functional_th_td" style="z-index:50;height: 28px;left:0;position: sticky;"> 
+          <form action="view.php#544" style="margin-bottom:0;" method="GET"> 
+           <button id="more_button14" onclick="toggleTheFunctionalMenu1(14);" type="button" class="more_button" name="aWRjb2Rl" value="3540248651"> بیشتر </button> 
+           <input type="hidden" name="c2lk" value="544" style=""> 
+          </form> 
+          <div id="TheFunctionalMenu114" value="544" class="slidemenu_table" style="width: 300px;"> 
+           <form action="/membership/bank/PaymentTerminal/V1/summary/" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);" method="GET"> 
+            <button class="more_button" name="aWRjb2Rl" value="3540248651"> نمایش </button> 
+            <input type="hidden" name="c2lk" value="544" style=""> 
+           </form> 
+           <form action="accept/" method="POST" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);"> 
+            <button class="more_button" name="c2lk" value="544"> تأیید </button> 
+           </form> 
+           <form action="delete/" method="POST" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);"> 
+            <button class="more_button" name="c2lk" value="544"> حذف </button> 
+           </form> 
+          </div> </td> 
+        </tr>
+        <tr>
+         <td>37</td>
+         <td>543</td>
+         <td>hasanlo</td>
+         <td>1704166768</td>
+         <td>ترمینال جدید</td> 
+         <td id="functional_th_td" style="z-index:50;height: 28px;left:0;position: sticky;"> 
+          <form action="view.php#543" style="margin-bottom:0;" method="GET"> 
+           <button id="more_button13" onclick="toggleTheFunctionalMenu1(13);" type="button" class="more_button" name="aWRjb2Rl" value="5890009699"> بیشتر </button> 
+           <input type="hidden" name="c2lk" value="543" style=""> 
+          </form> 
+          <div id="TheFunctionalMenu113" value="543" class="slidemenu_table" style="width: 300px;"> 
+           <form action="/membership/bank/PaymentTerminal/V1/summary/" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);" method="GET"> 
+            <button class="more_button" name="aWRjb2Rl" value="5890009699"> نمایش </button> 
+            <input type="hidden" name="c2lk" value="543" style=""> 
+           </form> 
+           <form action="accept/" method="POST" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);"> 
+            <button class="more_button" name="c2lk" value="543"> تأیید </button> 
+           </form> 
+           <form action="delete/" method="POST" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);"> 
+            <button class="more_button" name="c2lk" value="543"> حذف </button> 
+           </form> 
+          </div> </td> 
+        </tr>
+        <tr>
+         <td>38</td>
+         <td>542</td>
+         <td>rabehi</td>
+         <td>1704013419</td>
+         <td>ترمینال جدید</td> 
+         <td id="functional_th_td" style="z-index:50;height: 28px;left:0;position: sticky;"> 
+          <form action="view.php#542" style="margin-bottom:0;" method="GET"> 
+           <button id="more_button12" onclick="toggleTheFunctionalMenu1(12);" type="button" class="more_button" name="aWRjb2Rl" value="5890009699"> بیشتر </button> 
+           <input type="hidden" name="c2lk" value="542" style=""> 
+          </form> 
+          <div id="TheFunctionalMenu112" value="542" class="slidemenu_table" style="width: 300px;"> 
+           <form action="/membership/bank/PaymentTerminal/V1/summary/" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);" method="GET"> 
+            <button class="more_button" name="aWRjb2Rl" value="5890009699"> نمایش </button> 
+            <input type="hidden" name="c2lk" value="542" style=""> 
+           </form> 
+           <form action="accept/" method="POST" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);"> 
+            <button class="more_button" name="c2lk" value="542"> تأیید </button> 
+           </form> 
+           <form action="delete/" method="POST" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);"> 
+            <button class="more_button" name="c2lk" value="542"> حذف </button> 
+           </form> 
+          </div> </td> 
+        </tr>
+        <tr>
+         <td>39</td>
+         <td>541</td>
+         <td>amir rashedi</td>
+         <td>1703605184</td>
+         <td>ترمینال جدید</td> 
+         <td id="functional_th_td" style="z-index:50;height: 28px;left:0;position: sticky;"> 
+          <form action="view.php#541" style="margin-bottom:0;" method="GET"> 
+           <button id="more_button11" onclick="toggleTheFunctionalMenu1(11);" type="button" class="more_button" name="aWRjb2Rl" value="0690270119"> بیشتر </button> 
+           <input type="hidden" name="c2lk" value="541" style=""> 
+          </form> 
+          <div id="TheFunctionalMenu111" value="541" class="slidemenu_table" style="width: 300px;"> 
+           <form action="/membership/bank/PaymentTerminal/V1/summary/" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);" method="GET"> 
+            <button class="more_button" name="aWRjb2Rl" value="0690270119"> نمایش </button> 
+            <input type="hidden" name="c2lk" value="541" style=""> 
+           </form> 
+           <form action="accept/" method="POST" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);"> 
+            <button class="more_button" name="c2lk" value="541"> تأیید </button> 
+           </form> 
+           <form action="delete/" method="POST" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);"> 
+            <button class="more_button" name="c2lk" value="541"> حذف </button> 
+           </form> 
+          </div> </td> 
+        </tr>
+        <tr>
+         <td>40</td>
+         <td>540</td>
+         <td>ardame</td>
+         <td>1703604059</td>
+         <td>ترمینال جدید</td> 
+         <td id="functional_th_td" style="z-index:50;height: 28px;left:0;position: sticky;"> 
+          <form action="view.php#540" style="margin-bottom:0;" method="GET"> 
+           <button id="more_button10" onclick="toggleTheFunctionalMenu1(10);" type="button" class="more_button" name="aWRjb2Rl" value="2130153763"> بیشتر </button> 
+           <input type="hidden" name="c2lk" value="540" style=""> 
+          </form> 
+          <div id="TheFunctionalMenu110" value="540" class="slidemenu_table" style="width: 300px;"> 
+           <form action="/membership/bank/PaymentTerminal/V1/summary/" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);" method="GET"> 
+            <button class="more_button" name="aWRjb2Rl" value="2130153763"> نمایش </button> 
+            <input type="hidden" name="c2lk" value="540" style=""> 
+           </form> 
+           <form action="accept/" method="POST" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);"> 
+            <button class="more_button" name="c2lk" value="540"> تأیید </button> 
+           </form> 
+           <form action="delete/" method="POST" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);"> 
+            <button class="more_button" name="c2lk" value="540"> حذف </button> 
+           </form> 
+          </div> </td> 
+        </tr>
+        <tr>
+         <td>41</td>
+         <td>539</td>
+         <td>razmjo</td>
+         <td>1703579092</td>
+         <td>ترمینال جدید</td> 
+         <td id="functional_th_td" style="z-index:50;height: 28px;left:0;position: sticky;"> 
+          <form action="view.php#539" style="margin-bottom:0;" method="GET"> 
+           <button id="more_button9" onclick="toggleTheFunctionalMenu1(9);" type="button" class="more_button" name="aWRjb2Rl" value="3241104230"> بیشتر </button> 
+           <input type="hidden" name="c2lk" value="539" style=""> 
+          </form> 
+          <div id="TheFunctionalMenu19" value="539" class="slidemenu_table" style="width: 300px;"> 
+           <form action="/membership/bank/PaymentTerminal/V1/summary/" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);" method="GET"> 
+            <button class="more_button" name="aWRjb2Rl" value="3241104230"> نمایش </button> 
+            <input type="hidden" name="c2lk" value="539" style=""> 
+           </form> 
+           <form action="accept/" method="POST" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);"> 
+            <button class="more_button" name="c2lk" value="539"> تأیید </button> 
+           </form> 
+           <form action="delete/" method="POST" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);"> 
+            <button class="more_button" name="c2lk" value="539"> حذف </button> 
+           </form> 
+          </div> </td> 
+        </tr>
+        <tr>
+         <td>42</td>
+         <td>538</td>
+         <td>hasanlo</td>
+         <td>1703518302</td>
+         <td>ترمینال جدید</td> 
+         <td id="functional_th_td" style="z-index:50;height: 28px;left:0;position: sticky;"> 
+          <form action="view.php#538" style="margin-bottom:0;" method="GET"> 
+           <button id="more_button8" onclick="toggleTheFunctionalMenu1(8);" type="button" class="more_button" name="aWRjb2Rl" value="5899976934"> بیشتر </button> 
+           <input type="hidden" name="c2lk" value="538" style=""> 
+          </form> 
+          <div id="TheFunctionalMenu18" value="538" class="slidemenu_table" style="width: 300px;"> 
+           <form action="/membership/bank/PaymentTerminal/V1/summary/" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);" method="GET"> 
+            <button class="more_button" name="aWRjb2Rl" value="5899976934"> نمایش </button> 
+            <input type="hidden" name="c2lk" value="538" style=""> 
+           </form> 
+           <form action="accept/" method="POST" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);"> 
+            <button class="more_button" name="c2lk" value="538"> تأیید </button> 
+           </form> 
+           <form action="delete/" method="POST" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);"> 
+            <button class="more_button" name="c2lk" value="538"> حذف </button> 
+           </form> 
+          </div> </td> 
+        </tr>
+        <tr>
+         <td>43</td>
+         <td>537</td>
+         <td>hasanlo</td>
+         <td>1703513342</td>
+         <td>ترمینال جدید</td> 
+         <td id="functional_th_td" style="z-index:50;height: 28px;left:0;position: sticky;"> 
+          <form action="view.php#537" style="margin-bottom:0;" method="GET"> 
+           <button id="more_button7" onclick="toggleTheFunctionalMenu1(7);" type="button" class="more_button" name="aWRjb2Rl" value="4270228997"> بیشتر </button> 
+           <input type="hidden" name="c2lk" value="537" style=""> 
+          </form> 
+          <div id="TheFunctionalMenu17" value="537" class="slidemenu_table" style="width: 300px;"> 
+           <form action="/membership/bank/PaymentTerminal/V1/summary/" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);" method="GET"> 
+            <button class="more_button" name="aWRjb2Rl" value="4270228997"> نمایش </button> 
+            <input type="hidden" name="c2lk" value="537" style=""> 
+           </form> 
+           <form action="accept/" method="POST" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);"> 
+            <button class="more_button" name="c2lk" value="537"> تأیید </button> 
+           </form> 
+           <form action="delete/" method="POST" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);"> 
+            <button class="more_button" name="c2lk" value="537"> حذف </button> 
+           </form> 
+          </div> </td> 
+        </tr>
+        <tr>
+         <td>44</td>
+         <td>536</td>
+         <td>amir rashedi</td>
+         <td>1703513157</td>
+         <td>ترمینال جدید</td> 
+         <td id="functional_th_td" style="z-index:50;height: 28px;left:0;position: sticky;"> 
+          <form action="view.php#536" style="margin-bottom:0;" method="GET"> 
+           <button id="more_button6" onclick="toggleTheFunctionalMenu1(6);" type="button" class="more_button" name="aWRjb2Rl" value="0935922687"> بیشتر </button> 
+           <input type="hidden" name="c2lk" value="536" style=""> 
+          </form> 
+          <div id="TheFunctionalMenu16" value="536" class="slidemenu_table" style="width: 300px;"> 
+           <form action="/membership/bank/PaymentTerminal/V1/summary/" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);" method="GET"> 
+            <button class="more_button" name="aWRjb2Rl" value="0935922687"> نمایش </button> 
+            <input type="hidden" name="c2lk" value="536" style=""> 
+           </form> 
+           <form action="accept/" method="POST" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);"> 
+            <button class="more_button" name="c2lk" value="536"> تأیید </button> 
+           </form> 
+           <form action="delete/" method="POST" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);"> 
+            <button class="more_button" name="c2lk" value="536"> حذف </button> 
+           </form> 
+          </div> </td> 
+        </tr>
+        <tr>
+         <td>45</td>
+         <td>535</td>
+         <td>hasanlo</td>
+         <td>1703510580</td>
+         <td>ترمینال جدید</td> 
+         <td id="functional_th_td" style="z-index:50;height: 28px;left:0;position: sticky;"> 
+          <form action="view.php#535" style="margin-bottom:0;" method="GET"> 
+           <button id="more_button5" onclick="toggleTheFunctionalMenu1(5);" type="button" class="more_button" name="aWRjb2Rl" value="5899954477"> بیشتر </button> 
+           <input type="hidden" name="c2lk" value="535" style=""> 
+          </form> 
+          <div id="TheFunctionalMenu15" value="535" class="slidemenu_table" style="width: 300px;"> 
+           <form action="/membership/bank/PaymentTerminal/V1/summary/" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);" method="GET"> 
+            <button class="more_button" name="aWRjb2Rl" value="5899954477"> نمایش </button> 
+            <input type="hidden" name="c2lk" value="535" style=""> 
+           </form> 
+           <form action="accept/" method="POST" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);"> 
+            <button class="more_button" name="c2lk" value="535"> تأیید </button> 
+           </form> 
+           <form action="delete/" method="POST" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);"> 
+            <button class="more_button" name="c2lk" value="535"> حذف </button> 
+           </form> 
+          </div> </td> 
+        </tr>
+        <tr>
+         <td>46</td>
+         <td>534</td>
+         <td>haji hoseinlo</td>
+         <td>1703504293</td>
+         <td>ترمینال جدید</td> 
+         <td id="functional_th_td" style="z-index:50;height: 28px;left:0;position: sticky;"> 
+          <form action="view.php#534" style="margin-bottom:0;" method="GET"> 
+           <button id="more_button4" onclick="toggleTheFunctionalMenu1(4);" type="button" class="more_button" name="aWRjb2Rl" value="2802924516"> بیشتر </button> 
+           <input type="hidden" name="c2lk" value="534" style=""> 
+          </form> 
+          <div id="TheFunctionalMenu14" value="534" class="slidemenu_table" style="width: 300px;"> 
+           <form action="/membership/bank/PaymentTerminal/V1/summary/" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);" method="GET"> 
+            <button class="more_button" name="aWRjb2Rl" value="2802924516"> نمایش </button> 
+            <input type="hidden" name="c2lk" value="534" style=""> 
+           </form> 
+           <form action="accept/" method="POST" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);"> 
+            <button class="more_button" name="c2lk" value="534"> تأیید </button> 
+           </form> 
+           <form action="delete/" method="POST" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);"> 
+            <button class="more_button" name="c2lk" value="534"> حذف </button> 
+           </form> 
+          </div> </td> 
+        </tr>
+        <tr>
+         <td>47</td>
+         <td>533</td>
+         <td>ardame</td>
+         <td>1703495487</td>
+         <td>ترمینال جدید</td> 
+         <td id="functional_th_td" style="z-index:50;height: 28px;left:0;position: sticky;"> 
+          <form action="view.php#533" style="margin-bottom:0;" method="GET"> 
+           <button id="more_button3" onclick="toggleTheFunctionalMenu1(3);" type="button" class="more_button" name="aWRjb2Rl" value="2143295677"> بیشتر </button> 
+           <input type="hidden" name="c2lk" value="533" style=""> 
+          </form> 
+          <div id="TheFunctionalMenu13" value="533" class="slidemenu_table" style="width: 300px;"> 
+           <form action="/membership/bank/PaymentTerminal/V1/summary/" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);" method="GET"> 
+            <button class="more_button" name="aWRjb2Rl" value="2143295677"> نمایش </button> 
+            <input type="hidden" name="c2lk" value="533" style=""> 
+           </form> 
+           <form action="accept/" method="POST" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);"> 
+            <button class="more_button" name="c2lk" value="533"> تأیید </button> 
+           </form> 
+           <form action="delete/" method="POST" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);"> 
+            <button class="more_button" name="c2lk" value="533"> حذف </button> 
+           </form> 
+          </div> </td> 
+        </tr>
+        <tr>
+         <td>48</td>
+         <td>532</td>
+         <td>razmjo</td>
+         <td>1703440886</td>
+         <td>ترمینال جدید</td> 
+         <td id="functional_th_td" style="z-index:50;height: 28px;left:0;position: sticky;"> 
+          <form action="view.php#532" style="margin-bottom:0;" method="GET"> 
+           <button id="more_button2" onclick="toggleTheFunctionalMenu1(2);" type="button" class="more_button" name="aWRjb2Rl" value="3750452059"> بیشتر </button> 
+           <input type="hidden" name="c2lk" value="532" style=""> 
+          </form> 
+          <div id="TheFunctionalMenu12" value="532" class="slidemenu_table" style="width: 300px;"> 
+           <form action="/membership/bank/PaymentTerminal/V1/summary/" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);" method="GET"> 
+            <button class="more_button" name="aWRjb2Rl" value="3750452059"> نمایش </button> 
+            <input type="hidden" name="c2lk" value="532" style=""> 
+           </form> 
+           <form action="accept/" method="POST" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);"> 
+            <button class="more_button" name="c2lk" value="532"> تأیید </button> 
+           </form> 
+           <form action="delete/" method="POST" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);"> 
+            <button class="more_button" name="c2lk" value="532"> حذف </button> 
+           </form> 
+          </div> </td> 
+        </tr>
+        <tr>
+         <td>49</td>
+         <td>531</td>
+         <td>razmjo</td>
+         <td>1703439535</td>
+         <td>ترمینال جدید</td> 
+         <td id="functional_th_td" style="z-index:50;height: 28px;left:0;position: sticky;"> 
+          <form action="view.php#531" style="margin-bottom:0;" method="GET"> 
+           <button id="more_button1" onclick="toggleTheFunctionalMenu1(1);" type="button" class="more_button" name="aWRjb2Rl" value="4940085491"> بیشتر </button> 
+           <input type="hidden" name="c2lk" value="531" style=""> 
+          </form> 
+          <div id="TheFunctionalMenu11" value="531" class="slidemenu_table" style="width: 300px;"> 
+           <form action="/membership/bank/PaymentTerminal/V1/summary/" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);" method="GET"> 
+            <button class="more_button" name="aWRjb2Rl" value="4940085491"> نمایش </button> 
+            <input type="hidden" name="c2lk" value="531" style=""> 
+           </form> 
+           <form action="accept/" method="POST" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);"> 
+            <button class="more_button" name="c2lk" value="531"> تأیید </button> 
+           </form> 
+           <form action="delete/" method="POST" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);"> 
+            <button class="more_button" name="c2lk" value="531"> حذف </button> 
+           </form> 
+          </div> </td> 
+        </tr>
+        <tr>
+         <td>50</td>
+         <td>530</td>
+         <td>amir rashedi</td>
+         <td>1703257930</td>
+         <td>ترمینال جدید</td> 
+         <td id="functional_th_td" style="z-index:50;height: 28px;left:0;position: sticky;"> 
+          <form action="view.php#530" style="margin-bottom:0;" method="GET"> 
+           <button id="more_button0" onclick="toggleTheFunctionalMenu1(0);" type="button" class="more_button" name="aWRjb2Rl" value="0923030174"> بیشتر </button> 
+           <input type="hidden" name="c2lk" value="530" style=""> 
+          </form> 
+          <div id="TheFunctionalMenu10" value="530" class="slidemenu_table" style="width: 300px;"> 
+           <form action="/membership/bank/PaymentTerminal/V1/summary/" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);" method="GET"> 
+            <button class="more_button" name="aWRjb2Rl" value="0923030174"> نمایش </button> 
+            <input type="hidden" name="c2lk" value="530" style=""> 
+           </form> 
+           <form action="accept/" method="POST" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);"> 
+            <button class="more_button" name="c2lk" value="530"> تأیید </button> 
+           </form> 
+           <form action="delete/" method="POST" style="margin:2px 1px;border-radius: 50px;width:100%;background-image: linear-gradient(310deg,#17ad37,#98ec2d);"> 
+            <button class="more_button" name="c2lk" value="530"> حذف </button> 
+           </form> 
+          </div> </td> 
+        </tr> 
+       </tbody>
+      </table> 
+     </div> 
+    </section> 
+    <section id="pagination"> 
+     <button type="submit" form="SearchForm" name="pagination" value="1">1</button>
+     <input type="number" style="text-align:center;width:40px;background-color:inherit;color:white;border:1px solid white;font-weight: 900;" form="SearchForm" name="pagination" value="1">
+     <button type="submit" form="SearchForm" name="pagination" value="12">12</button>
+     <button type="submit" form="SearchForm" class="PagingButton" name="pagination" value="2">»</button> 
+    </section> 
+   </section> 
+  </main> 
+  <script>
+// دکمه بیشتر
+function toggleTheFunctionalMenu0(id){
+	console.log(id);
+	var TheFunctionalMenu0 = document.getElementById('TheFunctionalMenu0'+id);
+	if(TheFunctionalMenu0.style.display === 'none') {
+		TheFunctionalMenu0.style.display = 'flex';
+	} else {
+		TheFunctionalMenu0.style.display = 'none'
+	}
+}
+function toggleTheFunctionalMenu1(id){
+	console.log(id);
+	var TheFunctionalMenu1 = document.getElementById('TheFunctionalMenu1'+id);
+	var more_button = document.getElementById('more_button'+id);
+	more_button.innerHTML = 'بیشتر';
+	if(TheFunctionalMenu1.style.display === 'flex') {
+		TheFunctionalMenu1.style.display = 'none';
+		more_button.innerHTML = 'بیشتر';
+	} else {
+		TheFunctionalMenu1.style.display = 'flex'
+		more_button.innerHTML = 'کمتر';
+	}
+}
+</script> 
+ </body>
+</html>
